@@ -1,116 +1,173 @@
 <template>
-    <UContainer class="py-8">
-        <div class="flex flex-col items-center">
-            <!-- Dark mode toggle -->
-            <div class="absolute top-4 right-4">
-                <UButton color="gray" variant="ghost" :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
-                    @click="isDark = !isDark" aria-label="Toggle dark mode" />
-            </div>
+    <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 transition-colors duration-300">
+        <UContainer class="py-12 px-4">
+            <div class="flex flex-col items-center relative">
+                <!-- Dark mode toggle -->
+                <div class="absolute top-0 right-0">
+                    <UButton color="gray" variant="ghost" :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+                        @click="isDark = !isDark" aria-label="Toggle dark mode"
+                        class="hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full" />
+                </div>
 
-            <!-- Logo section -->
-            <div class="mb-6">
-                <img src="/img/logo.svg" alt="Logo" class="size-32" />
-            </div>
+                <!-- Logo section without animation -->
+                <div class="mb-8">
+                    <img src="/img/logo.svg" alt="Logo" class="size-36" />
+                </div>
 
-            <!-- Header text -->
-            <h1 class="text-3xl font-semibold text-center mb-4">
-                <span class="text-primary-500 dark:text-primary-400">Code.</span> Create. <span
-                    class="text-primary-500 dark:text-primary-400">Inspire.</span>
-            </h1>
+                <!-- Header text with enhanced styling -->
+                <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 tracking-tight">
+                    <span class="text-primary-500 dark:text-primary-400">Code.</span>
+                    <span class="relative">
+                        Create
+                        <span class="absolute bottom-1 left-0 w-full h-1 bg-primary-500/20 dark:bg-primary-400/20 rounded-full"></span>
+                    </span>
+                    <span class="text-primary-500 dark:text-primary-400">Inspire.</span>
+                </h1>
 
-            <p class="text-gray-600 dark:text-gray-400 text-center mb-6 max-w-md">
-                Essential resources to master Laravel and Nuxt.
-            </p>
+                <p class="text-gray-600 dark:text-gray-400 text-center mb-8 max-w-md text-lg">
+                    Essential resources to master Laravel and Nuxt.
+                </p>
 
-            <!-- Action buttons -->
-            <div class="flex flex-wrap gap-3 justify-center mb-12">
-                <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
-                    color="primary" icon="i-lucide-youtube" size="sm">
-                    YouTube
-                </UButton>
+                <!-- Action buttons with enhanced styling -->
+                <div class="flex flex-wrap gap-4 justify-center mb-16">
+                    <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                        color="primary" icon="i-lucide-youtube" size="lg" class="shadow-sm hover:shadow-md transition-shadow">
+                        YouTube
+                    </UButton>
 
-                <UButton to="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" variant="outline"
-                    icon="i-lucide-github" size="sm"
-                    class="dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
-                    GitHub
-                </UButton>
-            </div>
-
-            <!-- Uses section -->
-            <div class="w-full">
-                <!-- Section divider -->
-                <USeparator label="Uses" class="mb-6" />
-
-                <!-- Category Tabs -->
-                <UTabs :items="tabItems" v-model="activeTab" class="mb-6 w-full">
-                    <template #content="{ item }">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <UCard v-for="(items, category) in filteredUsesData(item.id)" :key="category"
-                                class="mb-4 dark:bg-gray-800 dark:border-gray-700">
-                                <template #header>
-                                    <div class="flex items-center gap-2">
-                                        <UIcon :name="getCategoryIcon(category)"
-                                            class="text-primary-500 dark:text-primary-400" />
-                                        <h3 class="text-base font-medium capitalize">{{ category }}</h3>
-                                    </div>
-                                </template>
-
-                                <div class="space-y-3">
-                                    <div v-for="(tool, index) in items" :key="index"
-                                        class="flex items-start gap-3 py-2 border-b border-gray-100 dark:border-gray-700 last:border-0">
-                                        <UIcon v-if="getItemIcon(category, tool.name)"
-                                            :name="getItemIcon(category, tool.name)"
-                                            class="mt-1 text-gray-500 dark:text-gray-400 flex-shrink-0" />
-                                        <div>
-                                            <span class="font-medium">{{ tool.name }}</span>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ tool.description
-                                                }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </UCard>
-                        </div>
-                    </template>
-                </UTabs>
-
-                <!-- VSCode Settings Link -->
-                <div class="mt-8 flex justify-center">
-                    <UButton to="https://gist.github.com/ludoguenet/b5fef1fe56200a48925fe6f88d9d245a" target="_blank"
-                        rel="noopener noreferrer" variant="ghost" icon="i-lucide-download" size="sm"
-                        class="dark:text-gray-300 dark:hover:bg-gray-800">
-                        VSCode Settings
+                    <UButton to="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
+                        variant="outline" icon="i-lucide-github" size="lg"
+                        class="dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 shadow-sm hover:shadow-md transition-shadow">
+                        GitHub
                     </UButton>
                 </div>
-            </div>
 
-            <!-- Footer -->
-            <div class="mt-12 text-sm text-gray-500 dark:text-gray-400 flex flex-col items-center gap-2">
-                <div class="flex items-center gap-2">
-                    <span>&copy; {{ new Date().getFullYear() }} Laravel Jutsu</span>
-                    <span class="text-gray-400 dark:text-gray-500">•</span>
-                    <span>Made with <span class="text-primary-500 dark:text-primary-400">💚</span> and passion</span>
+                <!-- Uses section with redesigned minimalist approach -->
+                <div class="w-full max-w-5xl mx-auto">
+                    <!-- Section header -->
+                    <div class="flex items-center gap-4 mb-12">
+                        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Uses</h2>
+                        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+                    </div>
+
+                    <!-- Uses content with modern grid layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        <!-- Editor Section -->
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <UIcon name="i-lucide-code" class="text-primary-500 dark:text-primary-400 size-6" />
+                                <h3 class="text-xl font-semibold">Editor</h3>
+                            </div>
+
+                            <div v-for="(item, index) in usesData.editor" :key="index"
+                                class="group p-4 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-primary-200 dark:hover:border-primary-800 transition-all duration-300 hover:shadow-soft bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                                <div class="flex items-start gap-3">
+                                    <UIcon :name="getItemIcon('editor', item.name)"
+                                        class="mt-1 text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors size-5" />
+                                    <div>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apps Section -->
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <UIcon name="i-lucide-monitor" class="text-primary-500 dark:text-primary-400 size-6" />
+                                <h3 class="text-xl font-semibold">Apps</h3>
+                            </div>
+
+                            <div v-for="(item, index) in usesData.apps" :key="index"
+                                class="group p-4 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-primary-200 dark:hover:border-primary-800 transition-all duration-300 hover:shadow-soft bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                                <div class="flex items-start gap-3">
+                                    <UIcon :name="getItemIcon('apps', item.name)"
+                                        class="mt-1 text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors size-5" />
+                                    <div>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hardware Section -->
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <UIcon name="i-lucide-laptop" class="text-primary-500 dark:text-primary-400 size-6" />
+                                <h3 class="text-xl font-semibold">Hardware</h3>
+                            </div>
+
+                            <div v-for="(item, index) in usesData.hardware" :key="index"
+                                class="group p-4 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-primary-200 dark:hover:border-primary-800 transition-all duration-300 hover:shadow-soft bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                                <div class="flex items-start gap-3">
+                                    <UIcon :name="getItemIcon('hardware', item.name)"
+                                        class="mt-1 text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors size-5" />
+                                    <div>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VSCode Settings Link with enhanced styling -->
+                    <div class="flex justify-center">
+                        <UButton to="https://gist.github.com/ludoguenet/b5fef1fe56200a48925fe6f88d9d245a" target="_blank"
+                            rel="noopener noreferrer" variant="soft" icon="i-lucide-download" size="md"
+                            class="dark:text-gray-300 dark:hover:bg-gray-800 transition-colors">
+                            VSCode Settings
+                        </UButton>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
-                        class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                        YouTube
-                    </a>
-                    <span class="text-gray-400 dark:text-gray-500">•</span>
-                    <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
-                        class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                        GitHub
-                    </a>
+
+                <!-- Footer with enhanced styling and additional social links -->
+                <div class="mt-16 text-sm text-gray-500 dark:text-gray-400 flex flex-col items-center gap-3">
+                    <div class="flex items-center gap-3">
+                        <span>&copy; {{ new Date().getFullYear() }} Laravel Jutsu</span>
+                        <span class="text-gray-400 dark:text-gray-500">•</span>
+                        <span>Made with <span class="text-primary-500 dark:text-primary-400">💚</span> and passion</span>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 mt-2">
+                        <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2">
+                            <UIcon name="i-lucide-youtube" class="size-4" />
+                            YouTube
+                        </a>
+                        <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2">
+                            <UIcon name="i-lucide-github" class="size-4" />
+                            GitHub
+                        </a>
+                        <a href="https://twitter.com/LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2">
+                            <UIcon name="i-lucide-twitter" class="size-4" />
+                            Twitter
+                        </a>
+                        <a href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2">
+                            <UIcon name="i-lucide-cloud" class="size-4" />
+                            Bluesky
+                        </a>
+                        <a href="https://www.linkedin.com/in/ludoguenet/" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex items-center gap-2">
+                            <UIcon name="i-lucide-linkedin" class="size-4" />
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </UContainer>
+        </UContainer>
+    </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
 
 const colorMode = useColorMode();
-const activeTab = ref();
 
 const isDark = computed({
     get() {
@@ -163,49 +220,6 @@ const usesData = {
         { name: "Keyboard", description: "Logitech Wireless Keyboard" },
         { name: "Mouse", description: "Logitech Wireless Mouse B330/M330/M331" }
     ]
-};
-
-const tabItems = [
-    {
-        id: 'all',
-        label: 'All',
-        icon: 'i-lucide-layers',
-    },
-    {
-        id: 'editor',
-        label: 'Editor',
-        icon: 'i-lucide-code',
-    },
-    {
-        id: 'apps',
-        label: 'Apps',
-        icon: 'i-lucide-monitor',
-    },
-    {
-        id: 'hardware',
-        label: 'Hardware',
-        icon: 'i-lucide-laptop',
-    }
-];
-
-// Filter uses data based on active tab
-const filteredUsesData = (tabId) => {
-    if (tabId === 'all' || tabId === 0) {
-        return usesData;
-    }
-
-    return Object.fromEntries(
-        Object.entries(usesData).filter(([category]) => category === tabId)
-    );
-};
-
-const getCategoryIcon = (category) => {
-    switch (category) {
-        case 'editor': return 'i-lucide-code';
-        case 'apps': return 'i-lucide-monitor';
-        case 'hardware': return 'i-lucide-laptop';
-        default: return 'i-lucide-layers';
-    }
 };
 
 const getItemIcon = (category, name) => {
