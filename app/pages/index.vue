@@ -295,11 +295,11 @@ useHead({
         { property: 'og:description', content: 'Essential resources to master Laravel and Nuxt. Explore tutorials, tools, and inspiration for web development.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://www.laraveljutsu.net' },
-        { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.png' },
+        { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.svg' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Laravel Jutsu - Master Laravel & Nuxt' },
         { name: 'twitter:description', content: 'Essential resources to master Laravel and Nuxt. Explore tutorials, tools, and inspiration for web development.' },
-        { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.png' }
+        { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.svg' }
     ],
     link: [
         { rel: 'canonical', href: 'https://www.laraveljutsu.net' }
