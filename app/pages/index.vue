@@ -124,6 +124,75 @@
                     </div>
                 </div>
 
+                <!-- Latest YouTube Video Section with enhanced styling -->
+                <div class="w-full max-w-5xl mx-auto mt-16">
+                    <!-- Section header with same style as Uses section -->
+                    <div class="flex items-center gap-4 mb-12">
+                        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Latest Video</h2>
+                        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+                    </div>
+
+                    <!-- Video container with consistent styling -->
+                    <div v-if="video" class="bg-white dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                        <!-- Video embed with proper responsive sizing -->
+                        <div class="aspect-video w-full">
+                            <iframe
+                                :src="`https://www.youtube.com/embed/${video.id}`"
+                                class="w-full h-full"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+
+                        <!-- Video details with consistent styling -->
+                        <div class="p-6">
+                            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{{ video.title }}</h3>
+                            <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                                <UIcon name="i-lucide-calendar" class="size-4" />
+                                <span>Published on {{ video.published }}</span>
+                            </div>
+
+                            <!-- Watch on YouTube button -->
+                            <div class="mt-4">
+                                <UButton
+                                    :to="`https://www.youtube.com/watch?v=${video.id}`"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    color="primary"
+                                    icon="i-lucide-youtube"
+                                    size="md"
+                                    class="shadow-sm hover:shadow-md transition-shadow"
+                                >
+                                    Watch on YouTube
+                                </UButton>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loading state with consistent styling -->
+                    <div v-else class="flex flex-col items-center justify-center p-12 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800">
+                        <UIcon name="i-lucide-loader" class="size-8 text-primary-500 dark:text-primary-400 animate-spin mb-4" />
+                        <p class="text-gray-600 dark:text-gray-400">Loading latest video...</p>
+                    </div>
+
+                    <!-- More videos link -->
+                    <div class="flex justify-center mt-6">
+                        <UButton
+                            to="https://www.youtube.com/@LaravelJutsu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="soft"
+                            icon="i-lucide-video"
+                            size="md"
+                            class="dark:text-gray-300 dark:hover:bg-gray-800 transition-colors"
+                        >
+                            View More Videos
+                        </UButton>
+                    </div>
+                </div>
+
                 <!-- Footer with enhanced styling and additional social links -->
                 <div class="mt-16 text-sm text-gray-500 dark:text-gray-400 flex flex-col items-center gap-3">
                     <div class="flex items-center gap-3">
@@ -165,7 +234,45 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, onMounted, computed } from 'vue';
+
+const video = ref(null);
+
+const fetchLatestVideo = async () => {
+  try {
+    const response = await fetch('/api/latest-video');
+    const xmlText = await response.text();
+
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(xmlText, 'text/xml');
+
+    const latestEntry = xml.querySelector('entry');
+
+    if (! latestEntry) {
+      console.error('No entries found in RSS feed');
+      return;
+    }
+
+    const videoIdElement = latestEntry.querySelector('yt\\:videoId, videoId');
+    const titleElement = latestEntry.querySelector('title');
+    const publishedElement = latestEntry.querySelector('published');
+
+    if (!videoIdElement || !titleElement || !publishedElement) {
+      console.error('Missing elements in the XML feed');
+      return;
+    }
+
+    video.value = {
+      id: videoIdElement.textContent,
+      title: titleElement.textContent,
+      published: new Date(publishedElement.textContent).toLocaleDateString(),
+    };
+  } catch (error) {
+    console.error('Error fetching video:', error);
+  }
+};
+
+onMounted(fetchLatestVideo);
 
 const colorMode = useColorMode();
 
