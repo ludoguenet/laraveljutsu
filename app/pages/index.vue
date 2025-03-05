@@ -39,6 +39,33 @@
             </UButton>
           </div>
 
+          <!-- Consulting Section -->
+          <div class="w-full max-w-4xl mx-auto mb-12">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+              <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Consulting</h2>
+              <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow"></div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-lg p-6 text-center">
+              <UIcon name="i-lucide-calendar" class="size-12 mx-auto mb-4 text-primary-500 dark:text-primary-400" />
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Need Expert Guidance?</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto">
+                Book a one-on-one consulting session to discuss your Laravel and Nuxt projects, architecture decisions, or get personalized mentoring.
+              </p>
+              <UButton
+                to="https://cal.com/laraveljutsu"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="primary"
+                icon="i-lucide-calendar"
+                size="lg"
+              >
+                Schedule Consultation
+              </UButton>
+            </div>
+          </div>
+
           <!-- Uses section with minimalist approach -->
           <div class="w-full max-w-4xl mx-auto">
             <!-- Section header -->
@@ -309,7 +336,7 @@
     title: 'Laravel Jutsu - Master Laravel & Nuxt',
     meta: [
       { name: 'description', content: 'Essential resources to master Laravel and Nuxt.' },
-      { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials' },
+      { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
       { name: 'author', content: 'Laravel Jutsu' },
       { property: 'og:title', content: 'Laravel Jutsu - Master Laravel & Nuxt' },
       { property: 'og:description', content: 'Essential resources to master Laravel and Nuxt.' },
