@@ -22,7 +22,7 @@
                 </h1>
 
                 <p class="text-gray-600 dark:text-gray-400 text-center mb-6 max-w-md">
-                    Essential resources to master Laravel and Nuxt.
+                    Tout ce qu’il vous faut pour exceller avec Laravel et Nuxt !
                 </p>
 
                 <!-- Action buttons with minimal styling -->
@@ -51,15 +51,14 @@
                         class="bg-white dark:bg-gray-900 text-center">
                         <UIcon name="i-lucide-calendar"
                             class="size-12 mx-auto mb-4 text-primary-500 dark:text-primary-400" />
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Need Expert Guidance?
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Besoin d’un coup de pouce ?
                         </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto">
-                            Book a one-on-one consulting session to discuss your Laravel and Nuxt projects, architecture
-                            decisions, or get personalized mentoring.
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
+                            Profitez d’un accompagnement personnalisé pour vos projets Laravel et Nuxt.
                         </p>
                         <UButton to="https://cal.com/laraveljutsu" target="_blank" rel="noopener noreferrer"
                             color="primary" icon="i-lucide-calendar" size="lg">
-                            Schedule Consultation
+                            Prendre RDV
                         </UButton>
                     </div>
                 </div>
@@ -157,7 +156,7 @@
                     <!-- Section header -->
                     <div class="flex items-center gap-4 mb-8">
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Latest Video</h2>
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Ma dernière vidéo</h2>
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                     </div>
 
@@ -185,7 +184,7 @@
                             <div class="mt-3">
                                 <UButton :to="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
                                     rel="noopener noreferrer" color="error" icon="i-lucide-youtube" size="sm">
-                                    Watch on YouTube
+                                    Regarder sur YouTube
                                 </UButton>
                             </div>
                         </div>
@@ -202,7 +201,7 @@
                         <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             variant="soft" icon="i-lucide-video" size="sm"
                             class="dark:text-gray-300 dark:hover:bg-gray-800">
-                            View More Videos
+                            Voir plus de vidéos
                         </UButton>
                     </div>
                 </div>
@@ -244,7 +243,7 @@
                             <UIcon name="i-lucide-cloud" class="size-5 sm:size-4 mr-2" />
                         </a>
                         <a href="https://www.linkedin.com/in/ludoguenet/" target="_blank" rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors col-span-3 sm:col-span-1">
+                            class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-linkedin" class="size-5 sm:size-4 mr-2" />
                         </a>
                     </div>
