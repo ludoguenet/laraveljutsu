@@ -329,6 +329,8 @@ const scrollToTop = () => {
 useHead({
     title: 'Laravel Jutsu - Master Laravel & Nuxt',
     meta: [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Essential resources to master Laravel and Nuxt.' },
         { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
         { name: 'author', content: 'Laravel Jutsu' },
