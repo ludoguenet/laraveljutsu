@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <UContainer class="py-8 px-4">
+        <UContainer class="py-16 px-4">
             <div class="flex flex-col items-center relative">
                 <!-- Dark mode toggle -->
                 <div class="absolute top-0 right-0">
@@ -10,23 +10,23 @@
                 </div>
 
                 <!-- Logo section -->
-                <div class="mb-6">
+                <div class="mb-8">
                     <img src="/img/logo.svg" alt="Logo" class="size-24">
                 </div>
 
                 <!-- Header text with minimal styling -->
-                <h1 class="text-3xl md:text-4xl font-bold text-center mb-3">
-                    <span class="text-primary-500 dark:text-primary-400">Code.</span>
-                    Create
+                <h1 class="text-3xl md:text-4xl font-bold text-center mb-4">
+                    <span class="text-primary-500 dark:text-primary-400 pr-1">Code.</span>
+                    <span class="text-primary-500 dark:text-primary-400 pr-1">Create.</span>
                     <span class="text-primary-500 dark:text-primary-400">Inspire.</span>
                 </h1>
 
-                <p class="text-gray-600 dark:text-gray-400 text-center mb-6 max-w-md">
-                    Tout ce qu’il vous faut pour exceller avec Laravel et Nuxt !
+                <p class="text-gray-600 dark:text-gray-400 text-center mb-8 max-w-md">
+                    Tout ce qu'il vous faut pour exceller avec Laravel et Nuxt !
                 </p>
 
                 <!-- Action buttons with minimal styling -->
-                <div class="flex gap-3 justify-center mb-12">
+                <div class="flex gap-3 justify-center mb-24">
                     <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                         color="primary" icon="i-lucide-youtube" size="md">
                         YouTube
@@ -40,21 +40,20 @@
                 </div>
 
                 <!-- Consulting Section -->
-                <div class="w-full max-w-4xl mx-auto mb-12">
-                    <div class="flex items-center gap-4 mb-8">
+                <div class="w-full max-w-4xl mx-auto mb-24">
+                    <div class="flex items-center gap-4 mb-12">
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Consulting</h2>
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                     </div>
 
-                    <div
-                        class="bg-white dark:bg-gray-900 text-center">
+                    <div class="bg-white dark:bg-gray-900 text-center">
                         <UIcon name="i-lucide-calendar"
-                            class="size-12 mx-auto mb-4 text-primary-500 dark:text-primary-400" />
-                        <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Besoin d’un coup de pouce ?
+                            class="size-12 mx-auto mb-6 text-primary-500 dark:text-primary-400" />
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Besoin d'un coup de pouce ?
                         </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
-                            Profitez d’un accompagnement personnalisé pour vos projets Laravel et Nuxt.
+                        <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+                            Profitez d'un accompagnement personnalisé pour vos projets Laravel et Nuxt.
                         </p>
                         <UButton to="https://cal.com/laraveljutsu" target="_blank" rel="noopener noreferrer"
                             color="primary" icon="i-lucide-calendar" size="lg">
@@ -64,33 +63,31 @@
                 </div>
 
                 <!-- Uses section with minimalist approach -->
-                <div class="w-full max-w-4xl mx-auto">
+                <div class="w-full max-w-4xl mx-auto mb-24">
                     <!-- Section header -->
-                    <div class="flex items-center gap-4 mb-8">
+                    <div class="flex items-center gap-4 mb-12">
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Uses</h2>
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                     </div>
 
                     <!-- Uses content with clean grid layout -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                         <!-- Editor Section -->
                         <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-3">
+                            <div class="flex items-center gap-2 mb-4">
                                 <UIcon name="i-lucide-code" class="text-primary-500 dark:text-primary-400 size-5" />
                                 <h3 class="text-lg font-semibold">Editor</h3>
                             </div>
 
                             <div v-for="(item, index) in usesData.editor" :key="index"
-                                class="p-3 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+                                class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
                                     <UIcon :name="getItemIcon('editor', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
-                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name
-                                            }}</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}
-                                        </p>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,21 +95,19 @@
 
                         <!-- Apps Section -->
                         <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-3">
+                            <div class="flex items-center gap-2 mb-4">
                                 <UIcon name="i-lucide-monitor" class="text-primary-500 dark:text-primary-400 size-5" />
                                 <h3 class="text-lg font-semibold">Apps</h3>
                             </div>
 
                             <div v-for="(item, index) in usesData.apps" :key="index"
-                                class="p-3 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+                                class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
                                     <UIcon :name="getItemIcon('apps', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
-                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name
-                                            }}</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}
-                                        </p>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -120,21 +115,19 @@
 
                         <!-- Hardware Section -->
                         <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-3">
+                            <div class="flex items-center gap-2 mb-4">
                                 <UIcon name="i-lucide-laptop" class="text-primary-500 dark:text-primary-400 size-5" />
                                 <h3 class="text-lg font-semibold">Hardware</h3>
                             </div>
 
                             <div v-for="(item, index) in usesData.hardware" :key="index"
-                                class="p-3 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+                                class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
                                     <UIcon :name="getItemIcon('hardware', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
-                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name
-                                            }}</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ item.description }}
-                                        </p>
+                                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -152,9 +145,9 @@
                 </div>
 
                 <!-- Latest YouTube Video Section with minimalist styling -->
-                <div class="w-full max-w-4xl mx-auto mt-12">
+                <div class="w-full max-w-4xl mx-auto mb-24">
                     <!-- Section header -->
-                    <div class="flex items-center gap-4 mb-8">
+                    <div class="flex items-center gap-4 mb-12">
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Ma dernière vidéo</h2>
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
@@ -172,16 +165,15 @@
                         </div>
 
                         <!-- Video details -->
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">{{ video.title }}
-                            </h3>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{{ video.title }}</h3>
                             <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
                                 <UIcon name="i-lucide-calendar" class="size-4" />
                                 <span>{{ video.published }}</span>
                             </div>
 
                             <!-- Watch on YouTube button -->
-                            <div class="mt-3">
+                            <div class="mt-4">
                                 <UButton :to="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
                                     rel="noopener noreferrer" color="error" icon="i-lucide-youtube" size="sm">
                                     Regarder sur YouTube
@@ -197,7 +189,7 @@
                     </div>
 
                     <!-- More videos link -->
-                    <div class="flex justify-center mt-4">
+                    <div class="flex justify-center mt-6">
                         <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             variant="soft" icon="i-lucide-video" size="sm"
                             class="dark:text-gray-300 dark:hover:bg-gray-800">
@@ -207,14 +199,14 @@
                 </div>
 
                 <!-- Improved Footer with better mobile styling -->
-                <footer class="mt-12 w-full max-w-4xl mx-auto">
+                <footer class="mt-24 w-full max-w-4xl mx-auto">
                     <!-- Divider -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-8">
                         <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
                     </div>
 
                     <!-- Copyright and tagline -->
-                    <div class="text-center mb-4">
+                    <div class="text-center mb-6">
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             &copy; {{ new Date().getFullYear() }} Laravel Jutsu
                             <span class="mx-2 hidden sm:inline">•</span>
@@ -224,7 +216,7 @@
                     </div>
 
                     <!-- Social links - grid for mobile, flex for desktop -->
-                    <div class="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center gap-y-3 gap-x-4 sm:gap-6 mb-6">
+                    <div class="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center gap-y-4 gap-x-6 sm:gap-8 mb-8">
                         <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-youtube" class="size-5 sm:size-4 mr-2" />
