@@ -4,7 +4,8 @@
             <div class="flex flex-col items-center relative">
                 <!-- Dark mode toggle -->
                 <div class="absolute top-0 right-0">
-                    <UButton color="gray" variant="ghost" :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+                    <UButton
+color="gray" variant="ghost" :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
                         aria-label="Toggle dark mode" class="hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
                         @click="isDark = !isDark" />
                 </div>
@@ -27,12 +28,14 @@
 
                 <!-- Action buttons with minimal styling -->
                 <div class="flex gap-3 justify-center mb-24">
-                    <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                    <UButton
+to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                         color="primary" icon="i-lucide-youtube" size="md">
                         YouTube
                     </UButton>
 
-                    <UButton to="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
+                    <UButton
+to="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
                         variant="outline" icon="i-lucide-github" size="md"
                         class="dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
                         GitHub
@@ -48,14 +51,16 @@
                     </div>
 
                     <div class="bg-white dark:bg-gray-900 text-center">
-                        <UIcon name="i-lucide-calendar"
+                        <UIcon
+name="i-lucide-calendar"
                             class="size-12 mx-auto mb-6 text-primary-500 dark:text-primary-400" />
                         <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Besoin d'un coup de pouce ?
                         </h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
                             Profitez d'un accompagnement personnalisé pour vos projets Laravel et Nuxt.
                         </p>
-                        <UButton to="https://cal.com/laraveljutsu" target="_blank" rel="noopener noreferrer"
+                        <UButton
+to="https://cal.com/laraveljutsu" target="_blank" rel="noopener noreferrer"
                             color="primary" icon="i-lucide-calendar" size="lg">
                             Prendre RDV
                         </UButton>
@@ -80,10 +85,12 @@
                                 <h3 class="text-lg font-semibold">Editor</h3>
                             </div>
 
-                            <div v-for="(item, index) in usesData.editor" :key="index"
+                            <div
+v-for="(item, index) in usesData.editor" :key="index"
                                 class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
-                                    <UIcon :name="getItemIcon('editor', item.name)"
+                                    <UIcon
+:name="getItemIcon('editor', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
                                         <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
@@ -100,10 +107,12 @@
                                 <h3 class="text-lg font-semibold">Apps</h3>
                             </div>
 
-                            <div v-for="(item, index) in usesData.apps" :key="index"
+                            <div
+v-for="(item, index) in usesData.apps" :key="index"
                                 class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
-                                    <UIcon :name="getItemIcon('apps', item.name)"
+                                    <UIcon
+:name="getItemIcon('apps', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
                                         <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
@@ -120,10 +129,12 @@
                                 <h3 class="text-lg font-semibold">Hardware</h3>
                             </div>
 
-                            <div v-for="(item, index) in usesData.hardware" :key="index"
+                            <div
+v-for="(item, index) in usesData.hardware" :key="index"
                                 class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
                                 <div class="flex items-start gap-2">
-                                    <UIcon :name="getItemIcon('hardware', item.name)"
+                                    <UIcon
+:name="getItemIcon('hardware', item.name)"
                                         class="mt-1 text-gray-500 dark:text-gray-400 size-4" />
                                     <div>
                                         <span class="font-medium text-gray-900 dark:text-gray-100">{{ item.name }}</span>
@@ -136,7 +147,8 @@
 
                     <!-- VSCode Settings Link with minimal styling -->
                     <div class="flex justify-center">
-                        <UButton to="https://gist.github.com/ludoguenet/b5fef1fe56200a48925fe6f88d9d245a"
+                        <UButton
+to="https://gist.github.com/ludoguenet/b5fef1fe56200a48925fe6f88d9d245a"
                             target="_blank" rel="noopener noreferrer" variant="soft" icon="i-lucide-download" size="sm"
                             class="dark:text-gray-300 dark:hover:bg-gray-800">
                             VSCode Settings
@@ -154,11 +166,13 @@
                     </div>
 
                     <!-- Video container with minimal styling -->
-                    <div v-if="video"
+                    <div
+v-if="video"
                         class="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800 overflow-hidden">
                         <!-- Video embed -->
                         <div class="aspect-video w-full">
-                            <iframe :src="`https://www.youtube.com/embed/${video.id}`" class="w-full h-full"
+                            <iframe
+:src="`https://www.youtube.com/embed/${video.id}`" class="w-full h-full"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen />
@@ -174,7 +188,8 @@
 
                             <!-- Watch on YouTube button -->
                             <div class="mt-4">
-                                <UButton :to="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
+                                <UButton
+:to="`https://www.youtube.com/watch?v=${video.id}`" target="_blank"
                                     rel="noopener noreferrer" color="error" icon="i-lucide-youtube" size="sm">
                                     Regarder sur YouTube
                                 </UButton>
@@ -183,14 +198,16 @@
                     </div>
 
                     <!-- Loading state -->
-                    <div v-else
+                    <div
+v-else
                         class="flex flex-col items-center justify-center p-8 bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800">
                         <UProgress animation="swing" color="primary" />
                     </div>
 
                     <!-- More videos link -->
                     <div class="flex justify-center mt-6">
-                        <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                        <UButton
+to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             variant="soft" icon="i-lucide-video" size="sm"
                             class="dark:text-gray-300 dark:hover:bg-gray-800">
                             Voir plus de vidéos
@@ -217,24 +234,29 @@
 
                     <!-- Social links - grid for mobile, flex for desktop -->
                     <div class="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center gap-y-4 gap-x-6 sm:gap-8 mb-8">
-                        <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                        <a
+href="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-youtube" class="size-5 sm:size-4 mr-2" />
                         </a>
-                        <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
+                        <a
+href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-github" class="size-5 sm:size-4 mr-2" />
                         </a>
-                        <a href="https://twitter.com/LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                        <a
+href="https://twitter.com/LaravelJutsu" target="_blank" rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-twitter" class="size-5 sm:size-4 mr-2" />
                         </a>
-                        <a href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank"
+                        <a
+href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank"
                             rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-cloud" class="size-5 sm:size-4 mr-2" />
                         </a>
-                        <a href="https://www.linkedin.com/in/ludoguenet/" target="_blank" rel="noopener noreferrer"
+                        <a
+href="https://www.linkedin.com/in/ludoguenet/" target="_blank" rel="noopener noreferrer"
                             class="flex justify-center items-center hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                             <UIcon name="i-lucide-linkedin" class="size-5 sm:size-4 mr-2" />
                         </a>
@@ -242,7 +264,8 @@
 
                     <!-- Back to top button -->
                     <div class="flex justify-center">
-                        <UButton variant="ghost" color="gray" icon="i-lucide-arrow-up" size="sm"
+                        <UButton
+variant="ghost" color="gray" icon="i-lucide-arrow-up" size="sm"
                             class="hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full" aria-label="Back to top"
                             @click="scrollToTop" />
                     </div>
@@ -292,13 +315,6 @@ const fetchLatestVideo = async () => {
 };
 
 onMounted(fetchLatestVideo);
-
-const socialLinks = [
-    { name: 'YouTube', url: 'https://www.youtube.com/@LaravelJutsu', icon: 'i-lucide-youtube' },
-    { name: 'GitHub', url: 'https://github.com/ludoguenet', icon: 'i-lucide-github' },
-    { name: 'Twitter', url: 'https://twitter.com/LaravelJutsu', icon: 'i-lucide-twitter' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ludoguenet/', icon: 'i-lucide-linkedin' }
-];
 
 const colorMode = useColorMode();
 
