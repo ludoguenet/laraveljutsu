@@ -320,21 +320,21 @@ const scrollToTop = () => {
 };
 
 useHead({
-    title: 'Laravel Jutsu - Master Laravel & Nuxt',
+    title: 'Laravel Jutsu - Maîtriser Laravel & Nuxt',
     meta: [
         { name: 'robots', content: 'index, follow' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Essential resources to master Laravel and Nuxt.' },
+        { name: 'description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
         { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
-        { name: 'author', content: 'Laravel Jutsu' },
-        { property: 'og:title', content: 'Laravel Jutsu - Master Laravel & Nuxt' },
-        { property: 'og:description', content: 'Essential resources to master Laravel and Nuxt.' },
+        { name: 'author', content: 'Ludovic Guénet' },
+        { property: 'og:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
+        { property: 'og:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://www.laraveljutsu.net' },
         { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Laravel Jutsu - Master Laravel & Nuxt' },
-        { name: 'twitter:description', content: 'Essential resources to master Laravel and Nuxt.' },
+        { name: 'twitter:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
+        { name: 'twitter:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
         { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.png' }
     ],
     link: [
