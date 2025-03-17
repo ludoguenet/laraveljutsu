@@ -15,10 +15,10 @@
                 </div>
 
                 <!-- Header text with minimal styling -->
-                <h1 class="text-3xl md:text-4xl font-bold text-center mb-4">
-                    <span class="text-primary-500 dark:text-primary-400 pr-1">Code.</span>
-                    <span class="text-primary-500 dark:text-primary-400 pr-1">Create.</span>
-                    <span class="text-primary-500 dark:text-primary-400">Inspire.</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 tracking-tighter">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-200 pr-2 inline-block  transition-transform duration-300">Code.</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-300 dark:from-primary-300 dark:to-primary-100 pr-2 inline-block  transition-transform duration-300">Create.</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-200 dark:from-primary-200 dark:to-primary-50 inline-block  transition-transform duration-300">Inspire.</span>
                 </h1>
 
                 <p class="text-gray-600 dark:text-gray-400 text-center mb-8 max-w-md">
