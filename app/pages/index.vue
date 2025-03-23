@@ -39,6 +39,93 @@
                     </UButton>
                 </div>
 
+                <!-- Laravel 12 Video Series Section -->
+<div class="w-full max-w-4xl mx-auto mb-24">
+    <!-- Section header -->
+    <div class="flex items-center gap-4 mb-12">
+        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
+        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">Apprendre Laravel 12</h2>
+        <div class="h-px bg-gray-200 dark:bg-gray-800 flex-grow" />
+    </div>
+
+    <!-- Laravel 12 content -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800 overflow-hidden">
+        <!-- Series banner with image -->
+        <div class="aspect-video w-full relative overflow-hidden">
+            <!-- Background image -->
+            <img src="/img/apprendre-laravel-12.jpg" alt="Laravel 12 Series" class="w-full h-full object-cover brightness-75 absolute inset-0">
+
+            <!-- Overlay to ensure text readability -->
+            <div class="absolute inset-0 bg-primary-600/70 dark:bg-primary-800/70"></div>
+
+            <!-- Content overlay -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-6 z-10">
+                    <UIcon name="i-lucide-play-circle" class="size-16 text-white mb-4" />
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Apprendre Laravel 12</h3>
+                    <p class="text-white/80 max-w-lg mx-auto">Série vidéo complète pour maîtriser Laravel 12 de zéro</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Series details -->
+        <div class="p-6">
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Découvrez ma nouvelle série de tutoriels vidéo pour apprendre Laravel 12 de A à Z.
+                Que vous soyez débutant ou développeur expérimenté, cette série vous guidera à travers
+                toutes les fonctionnalités de Laravel 12 avec des exemples concrets et des projets pratiques.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <UIcon name="i-lucide-check-circle" class="size-5 text-primary-500 dark:text-primary-400 mt-1" />
+                    <div>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">De zéro à expert</span>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Aucun prérequis nécessaire</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <UIcon name="i-lucide-check-circle" class="size-5 text-primary-500 dark:text-primary-400 mt-1" />
+                    <div>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">Projets pratiques</span>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Apprenez en construisant</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <UIcon name="i-lucide-check-circle" class="size-5 text-primary-500 dark:text-primary-400 mt-1" />
+                    <div>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">Contenu mis à jour</span>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Les dernières fonctionnalités</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <UIcon name="i-lucide-check-circle" class="size-5 text-primary-500 dark:text-primary-400 mt-1" />
+                    <div>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">Support communautaire</span>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Entraide et discussions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex flex-col justify-center sm:flex-row gap-3 mt-6">
+                <UButton to="https://apprendre-laravel-12.net" target="_blank" rel="noopener noreferrer"
+                    color="primary" icon="i-lucide-video" size="lg">
+                    Accéder à la série
+                </UButton>
+
+                <UButton to="https://www.youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer"
+                    variant="outline" icon="i-lucide-youtube" size="lg" class="dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+                    Voir sur YouTube
+                </UButton>
+            </div>
+        </div>
+    </div>
+</div>
+
                 <!-- Consulting Section -->
                 <div class="w-full max-w-4xl mx-auto mb-24">
                     <div class="flex items-center gap-4 mb-12">
