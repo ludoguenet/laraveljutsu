@@ -116,7 +116,7 @@ to="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer"
             <!-- Action buttons -->
             <div class="flex flex-col justify-center sm:flex-row gap-3 mt-6">
                 <UButton
-to="https://apprendre-laravel-12.net" target="_blank" rel="noopener noreferrer"
+                    to="https://apprendre-laravel-12.net" target="_blank" rel="noopener noreferrer"
                     color="primary" icon="i-lucide-video" size="lg">
                     Accéder à la série
                 </UButton>
