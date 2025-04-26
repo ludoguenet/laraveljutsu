@@ -1,9 +1,11 @@
 <template>
     <div class="min-h-screen bg-white dark:bg-zinc-900 transition-colors duration-300">
-        <UContainer class="py-16 px-4">
-            <div class="flex flex-col items-center relative">
-                <!-- Bouton mode sombre - redessiné avec animation subtile -->
-                <div class="absolute top-0 right-0">
+        <!-- Hero Section -->
+        <div class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-lime-50 to-lime-100 dark:from-zinc-800 dark:to-zinc-900 opacity-50" />
+            <UContainer class="relative py-32">
+                <!-- Dark mode toggle -->
+                <div class="absolute top-4 right-4">
                     <UButton
                         color="gray"
                         variant="ghost"
@@ -13,123 +15,77 @@
                         @click="isDark = !isDark"
                     />
                 </div>
-
-                <!-- Section logo avec animation subtile -->
-                <div class="mb-8 transform transition-all duration-500 hover:scale-105">
-                    <img src="/img/logo.svg" alt="Logo" class="size-24">
-                </div>
-
-                <!-- Texte d'en-tête avec style amélioré et animations -->
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 tracking-tighter">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200 pr-2 inline-block transition-transform duration-300 hover:scale-105">Coder.</span>
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-500 to-lime-300 dark:from-lime-300 dark:to-lime-100 pr-2 inline-block transition-transform duration-300 hover:scale-105 delay-75">Créer.</span>
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-200 dark:from-lime-200 dark:to-lime-50 inline-block transition-transform duration-300 hover:scale-105 delay-150">Inspirer.</span>
-                </h1>
-
-                <p class="text-zinc-600 dark:text-zinc-400 text-center mb-8 max-w-md leading-relaxed">
-                    Tout ce qu'il vous faut pour exceller avec Laravel et Nuxt !
-                </p>
-
-                <!-- Boutons d'action avec style amélioré -->
-                <div class="flex gap-4 justify-center mb-24">
-                    <UButton
-                        to="https://www.youtube.com/@LaravelJutsu"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        color="primary"
-                        icon="i-lucide-youtube"
-                        size="md"
-                        class="transform transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md bg-lime-500 hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700"
-                    >
-                        YouTube
-                    </UButton>
-
-                    <UButton
-                        to="https://github.com/ludoguenet"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="outline"
-                        icon="i-lucide-github"
-                        size="md"
-                        class="dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 transform transition-all duration-300 hover:scale-105"
-                    >
-                        GitHub
-                    </UButton>
-                </div>
-
-                <!-- Section Série Vidéo Laravel 12 - Design affiné -->
-                <div class="w-full max-w-4xl mx-auto mb-24">
-                    <!-- En-tête de section avec style amélioré -->
-                    <div class="flex items-center gap-4 mb-12">
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                        <h2 class="text-xl font-bold text-zinc-800 dark:text-zinc-200">Apprendre Laravel 12</h2>
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="flex justify-center mb-8">
+                        <img src="/img/logo.svg" alt="Logo" class="size-16 transform transition-transform duration-500 hover:scale-110">
                     </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-600 to-lime-400 dark:from-lime-400 dark:to-lime-200">Laravel Jutsu</span>
+                    </h1>
+                    <p class="text-xl text-zinc-600 dark:text-zinc-400 mb-12">
+                        Maîtriser Laravel & Nuxt avec élégance
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <UButton
+                            to="https://www.youtube.com/@LaravelJutsu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="primary"
+                            icon="i-lucide-youtube"
+                            size="lg"
+                            class="transform transition-all duration-300 hover:scale-105"
+                        >
+                            YouTube
+                        </UButton>
+                        <UButton
+                            to="https://github.com/ludoguenet"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="outline"
+                            icon="i-lucide-github"
+                            size="lg"
+                            class="dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 transform transition-all duration-300 hover:scale-105"
+                        >
+                            GitHub
+                        </UButton>
+                    </div>
+                </div>
+            </UContainer>
+        </div>
 
-                    <!-- Contenu Laravel 12 - Design de carte amélioré -->
-                    <div class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-                        <!-- Bannière de série avec effet d'image amélioré -->
-                        <div class="aspect-video w-full relative overflow-hidden group">
-                            <!-- Image d'arrière-plan avec effet de survol -->
-                            <img src="/img/apprendre-laravel-12.jpg" alt="Série Laravel 12" class="w-full h-full object-cover brightness-75 absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-
-                            <!-- Superposition avec dégradé -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-lime-900/80 via-lime-700/60 to-lime-500/50 dark:from-lime-900/90 dark:via-lime-800/70 dark:to-lime-600/50"/>
-
-                            <!-- Superposition de contenu -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-center px-6 z-10 transition-all duration-500 group-hover:scale-105">
-                                    <UIcon name="i-lucide-play-circle" class="size-16 text-white mb-4 opacity-90 group-hover:opacity-100" />
-                                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Apprendre Laravel 12</h3>
-                                    <p class="text-white/80 max-w-lg mx-auto group-hover:text-white/100">Série vidéo complète pour maîtriser Laravel 12 de zéro</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Détails de la série avec typographie et espacement améliorés -->
-                        <div class="p-8">
-                            <p class="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
+        <!-- Main Content -->
+        <UContainer class="py-24">
+            <!-- Laravel 12 Series -->
+            <div class="mb-32">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-16">Apprendre Laravel 12</h2>
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-semibold">Série vidéo complète</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
                                 Découvrez ma nouvelle série de tutoriels vidéo pour apprendre Laravel 12 de A à Z.
                                 Que vous soyez débutant ou développeur expérimenté, cette série vous guidera à travers
                                 toutes les fonctionnalités de Laravel 12 avec des exemples concrets et des projets pratiques.
                             </p>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                                <div class="flex items-start gap-3 group">
-                                    <UIcon name="i-lucide-check-circle" class="size-5 text-lime-500 dark:text-lime-400 mt-1 group-hover:text-lime-600 dark:group-hover:text-lime-300 transition-colors" />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">De zéro à expert</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Aucun prérequis nécessaire</p>
-                                    </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center gap-3">
+                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-5" />
+                                    <span class="text-sm">De zéro à expert</span>
                                 </div>
-
-                                <div class="flex items-start gap-3 group">
-                                    <UIcon name="i-lucide-check-circle" class="size-5 text-lime-500 dark:text-lime-400 mt-1 group-hover:text-lime-600 dark:group-hover:text-lime-300 transition-colors" />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">Projets pratiques</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Apprenez en construisant</p>
-                                    </div>
+                                <div class="flex items-center gap-3">
+                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-5" />
+                                    <span class="text-sm">Projets pratiques</span>
                                 </div>
-
-                                <div class="flex items-start gap-3 group">
-                                    <UIcon name="i-lucide-check-circle" class="size-5 text-lime-500 dark:text-lime-400 mt-1 group-hover:text-lime-600 dark:group-hover:text-lime-300 transition-colors" />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">Contenu mis à jour</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Les dernières fonctionnalités</p>
-                                    </div>
+                                <div class="flex items-center gap-3">
+                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-5" />
+                                    <span class="text-sm">Contenu mis à jour</span>
                                 </div>
-
-                                <div class="flex items-start gap-3 group">
-                                    <UIcon name="i-lucide-check-circle" class="size-5 text-lime-500 dark:text-lime-400 mt-1 group-hover:text-lime-600 dark:group-hover:text-lime-300 transition-colors" />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">Support communautaire</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Entraide et discussions</p>
-                                    </div>
+                                <div class="flex items-center gap-3">
+                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-5" />
+                                    <span class="text-sm">Support communautaire</span>
                                 </div>
                             </div>
-
-                            <!-- Boutons d'action avec style amélioré -->
-                            <div class="flex flex-col justify-center sm:flex-row gap-4 mt-6">
+                            <div class="flex gap-4 mt-8">
                                 <UButton
                                     to="https://apprendre-laravel-12.net"
                                     target="_blank"
@@ -137,178 +93,56 @@
                                     color="primary"
                                     icon="i-lucide-video"
                                     size="lg"
-                                    class="transform transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md bg-lime-500 hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700"
+                                    class="transform transition-all duration-300 hover:scale-105"
                                 >
                                     Accéder à la série
                                 </UButton>
-
-                                <UButton
-                                    to="https://www.youtube.com/@LaravelJutsu"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    variant="outline"
-                                    icon="i-lucide-youtube"
-                                    size="lg"
-                                    class="dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 transform transition-all duration-300 hover:scale-105"
-                                >
-                                    Voir sur YouTube
-                                </UButton>
+                            </div>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden shadow-xl">
+                            <img src="/img/apprendre-laravel-12.jpg" alt="Série Laravel 12" class="absolute inset-0 w-full h-full object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <UIcon name="i-lucide-play-circle" class="size-16 text-white opacity-90 hover:opacity-100 transition-opacity" />
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Section Consulting - Design affiné -->
-                <div class="w-full max-w-4xl mx-auto mb-24">
-                    <div class="flex items-center gap-4 mb-12">
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                        <h2 class="text-xl font-bold text-zinc-800 dark:text-zinc-200">Consulting</h2>
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                    </div>
-
-                    <!-- Carte de consulting avec style amélioré -->
-                    <div class="bg-white dark:bg-zinc-900 text-center p-10 rounded-xl border border-zinc-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all duration-300">
-                        <UIcon
-                            name="i-lucide-calendar"
-                            class="size-16 mx-auto mb-6 text-lime-500 dark:text-lime-400 transform transition-all duration-300 hover:scale-110"
-                        />
-                        <h3 class="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-100">Besoin d'un coup de pouce ?</h3>
-                        <p class="text-zinc-600 dark:text-zinc-400 mb-8 max-w-xl mx-auto leading-relaxed">
-                            Profitez d'un accompagnement personnalisé pour vos projets Laravel et Nuxt.
-                        </p>
-                        <UButton
-                            to="https://cal.com/laraveljutsu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            color="primary"
-                            icon="i-lucide-calendar"
-                            size="lg"
-                            class="transform transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md bg-lime-500 hover:bg-lime-600 dark:bg-lime-600 dark:hover:bg-lime-700"
-                        >
-                            Prendre RDV
-                        </UButton>
+            <!-- Consulting Section -->
+            <div class="mb-32">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-16">Consulting</h2>
+                    <div class="bg-white dark:bg-zinc-800 rounded-2xl p-12 shadow-xl">
+                        <div class="max-w-2xl mx-auto text-center">
+                            <UIcon name="i-lucide-calendar" class="size-16 mx-auto mb-8 text-lime-500 dark:text-lime-400" />
+                            <h3 class="text-2xl font-semibold mb-6">Besoin d'un coup de pouce ?</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 mb-8">
+                                Profitez d'un accompagnement personnalisé pour vos projets Laravel et Nuxt.
+                            </p>
+                            <UButton
+                                to="https://cal.com/laraveljutsu"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                color="primary"
+                                icon="i-lucide-calendar"
+                                size="lg"
+                                class="transform transition-all duration-300 hover:scale-105"
+                            >
+                                Prendre RDV
+                            </UButton>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Section Outils avec style amélioré -->
-                <div class="w-full max-w-4xl mx-auto mb-24">
-                    <!-- En-tête de section -->
-                    <div class="flex items-center gap-4 mb-12">
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                        <h2 class="text-xl font-bold text-zinc-800 dark:text-zinc-200">Mes Outils</h2>
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                    </div>
-
-                    <!-- Contenu Outils avec disposition en grille améliorée -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        <!-- Section Éditeur -->
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-6">
-                                <UIcon name="i-lucide-code" class="text-lime-500 dark:text-lime-400 size-5" />
-                                <h3 class="text-lg font-semibold dark:text-zinc-200">Éditeur</h3>
-                            </div>
-
-                            <div
-                                v-for="(item, index) in usesData.editor"
-                                :key="index"
-                                class="p-4 rounded-lg border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-lime-200 dark:hover:border-lime-800 transition-all duration-300 group"
-                            >
-                                <div class="flex items-start gap-3">
-                                    <UIcon
-                                        :name="getItemIcon('editor', item.name)"
-                                        class="mt-1 text-zinc-500 dark:text-zinc-400 size-4 group-hover:text-lime-500 dark:group-hover:text-lime-400 transition-colors"
-                                    />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">{{ item.name }}</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">{{ item.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Section Applications -->
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-6">
-                                <UIcon name="i-lucide-monitor" class="text-lime-500 dark:text-lime-400 size-5" />
-                                <h3 class="text-lg font-semibold dark:text-zinc-200">Applications</h3>
-                            </div>
-
-                            <div
-                                v-for="(item, index) in usesData.apps"
-                                :key="index"
-                                class="p-4 rounded-lg border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-lime-200 dark:hover:border-lime-800 transition-all duration-300 group"
-                            >
-                                <div class="flex items-start gap-3">
-                                    <UIcon
-                                        :name="getItemIcon('apps', item.name)"
-                                        class="mt-1 text-zinc-500 dark:text-zinc-400 size-4 group-hover:text-lime-500 dark:group-hover:text-lime-400 transition-colors"
-                                    />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">{{ item.name }}</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">{{ item.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Section Matériel -->
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-2 mb-6">
-                                <UIcon name="i-lucide-laptop" class="text-lime-500 dark:text-lime-400 size-5" />
-                                <h3 class="text-lg font-semibold dark:text-zinc-200">Matériel</h3>
-                            </div>
-
-                            <div
-                                v-for="(item, index) in usesData.hardware"
-                                :key="index"
-                                class="p-4 rounded-lg border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-lime-200 dark:hover:border-lime-800 transition-all duration-300 group"
-                            >
-                                <div class="flex items-start gap-3">
-                                    <UIcon
-                                        :name="getItemIcon('hardware', item.name)"
-                                        class="mt-1 text-zinc-500 dark:text-zinc-400 size-4 group-hover:text-lime-500 dark:group-hover:text-lime-400 transition-colors"
-                                    />
-                                    <div>
-                                        <span class="font-medium text-zinc-900 dark:text-zinc-100">{{ item.name }}</span>
-                                        <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">{{ item.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Lien vers les paramètres VSCode avec style amélioré -->
-                    <div class="flex justify-center">
-                        <UButton
-                            to="https://gist.github.com/ludoguenet/b5fef1fe56200a48925fe6f88d9d245a"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="soft"
-                            icon="i-lucide-download"
-                            size="sm"
-                            class="dark:text-zinc-300 dark:hover:bg-zinc-800 transform transition-all duration-300 hover:scale-105"
-                        >
-                            Paramètres VSCode
-                        </UButton>
-                    </div>
-                </div>
-
-                <!-- Section Dernière Vidéo YouTube avec style amélioré -->
-                <div class="w-full max-w-4xl mx-auto mb-24">
-                    <!-- En-tête de section -->
-                    <div class="flex items-center gap-4 mb-12">
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                        <h2 class="text-xl font-bold text-zinc-800 dark:text-zinc-200">Ma dernière vidéo</h2>
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
-                    </div>
-
-                    <!-- Conteneur vidéo avec style amélioré -->
-                    <div
-                        v-if="video"
-                        class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-                    >
-                        <!-- Intégration vidéo -->
-                        <div class="aspect-video w-full overflow-hidden">
+            <!-- Latest Video -->
+            <div class="mb-32">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-16">Dernière vidéo</h2>
+                    <div v-if="video" class="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-xl">
+                        <div class="aspect-video">
                             <iframe
                                 :src="`https://www.youtube.com/embed/${video.id}`"
                                 class="w-full h-full"
@@ -317,137 +151,92 @@
                                 allowfullscreen
                             />
                         </div>
-
-                        <!-- Détails de la vidéo avec typographie améliorée -->
                         <div class="p-8">
-                            <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4 hover:text-lime-600 dark:hover:text-lime-400 transition-colors">
-                                {{ video.title }}
-                            </h3>
+                            <h3 class="text-xl font-semibold mb-4">{{ video.title }}</h3>
                             <div class="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 text-sm mb-6">
                                 <UIcon name="i-lucide-calendar" class="size-4" />
                                 <span>{{ video.published }}</span>
                             </div>
-
-                            <!-- Bouton Regarder sur YouTube -->
                             <UButton
                                 :to="`https://www.youtube.com/watch?v=${video.id}`"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 color="error"
                                 icon="i-lucide-youtube"
-                                size="sm"
+                                size="lg"
                                 class="transform transition-all duration-300 hover:scale-105"
                             >
                                 Regarder sur YouTube
                             </UButton>
                         </div>
                     </div>
-
-                    <!-- État de chargement avec style amélioré -->
-                    <div
-                        v-else
-                        class="flex flex-col items-center justify-center p-16 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800 shadow-sm"
-                    >
+                    <div v-else class="flex justify-center items-center p-16">
                         <UProgress animation="swing" color="primary" class="w-24" />
-                        <p class="text-zinc-500 dark:text-zinc-400 mt-4">Chargement...</p>
-                    </div>
-
-                    <!-- Lien vers plus de vidéos -->
-                    <div class="flex justify-center mt-6">
-                        <UButton
-                            to="https://www.youtube.com/@LaravelJutsu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="soft"
-                            icon="i-lucide-video"
-                            size="sm"
-                            class="dark:text-zinc-300 dark:hover:bg-zinc-800 transform transition-all duration-300 hover:scale-105"
-                        >
-                            Voir plus de vidéos
-                        </UButton>
                     </div>
                 </div>
+            </div>
 
-                <!-- Pied de page amélioré avec meilleur style -->
-                <footer class="mt-24 w-full max-w-4xl mx-auto">
-                    <!-- Séparateur avec dégradé -->
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-800 flex-grow" />
+            <!-- Tools Section -->
+            <div class="mb-32">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-16">Mes Outils</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div v-for="(category, categoryName) in usesData" :key="categoryName" class="space-y-6">
+                            <div class="flex items-center gap-3">
+                                <UIcon :name="getCategoryIcon(categoryName)" class="text-lime-500 dark:text-lime-400 size-5" />
+                                <h3 class="text-lg font-semibold">{{ getCategoryTitle(categoryName) }}</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div
+                                    v-for="(item, index) in category"
+                                    :key="index"
+                                    class="p-4 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:border-lime-400 dark:hover:border-lime-500 transition-colors"
+                                >
+                                    <div class="flex items-center gap-3">
+                                        <UIcon
+                                            :name="getItemIcon(categoryName, item.name)"
+                                            class="text-zinc-500 dark:text-zinc-400 size-4"
+                                        />
+                                        <div>
+                                            <span class="font-medium">{{ item.name }}</span>
+                                            <p class="text-sm text-zinc-500 dark:text-zinc-400">{{ item.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Copyright et slogan avec animation subtile -->
-                    <div class="text-center mb-8">
-                        <p class="text-sm text-zinc-500 dark:text-zinc-400">
-                            &copy; {{ new Date().getFullYear() }} Laravel Jutsu
-                            <span class="mx-2 hidden sm:inline">•</span>
-                            <span class="block sm:inline mt-1 sm:mt-0">Fait avec <span class="text-lime-500 dark:text-lime-400 inline-block transition-transform hover:scale-125 duration-300">💚</span></span>
-                        </p>
-                    </div>
-
-                    <!-- Liens sociaux avec style amélioré -->
-                    <div class="grid grid-cols-3 sm:flex sm:flex-wrap sm:justify-center gap-y-4 gap-x-6 sm:gap-8 mb-12">
-                        <a
-                            href="https://www.youtube.com/@LaravelJutsu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-lime-500 dark:hover:text-lime-400 transition-all duration-300 hover:scale-110"
-                            aria-label="YouTube"
-                        >
-                            <UIcon name="i-lucide-youtube" class="size-5 sm:size-5" />
-                        </a>
-                        <a
-                            href="https://github.com/ludoguenet"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-lime-500 dark:hover:text-lime-400 transition-all duration-300 hover:scale-110"
-                            aria-label="GitHub"
-                        >
-                            <UIcon name="i-lucide-github" class="size-5 sm:size-5" />
-                        </a>
-                        <a
-                            href="https://twitter.com/LaravelJutsu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-lime-500 dark:hover:text-lime-400 transition-all duration-300 hover:scale-110"
-                            aria-label="Twitter"
-                        >
-                            <UIcon name="i-lucide-twitter" class="size-5 sm:size-5" />
-                        </a>
-                        <a
-                            href="https://bsky.app/profile/laraveljutsu.bsky.social"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-lime-500 dark:hover:text-lime-400 transition-all duration-300 hover:scale-110"
-                            aria-label="BlueSky"
-                        >
-                            <UIcon name="i-lucide-cloud" class="size-5 sm:size-5" />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/ludoguenet/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex justify-center items-center hover:text-lime-500 dark:hover:text-lime-400 transition-all duration-300 hover:scale-110"
-                            aria-label="LinkedIn"
-                        >
-                            <UIcon name="i-lucide-linkedin" class="size-5 sm:size-5" />
-                        </a>
-                    </div>
-
-                    <!-- Bouton retour en haut avec style amélioré -->
-                    <div class="flex justify-center">
-                        <UButton
-                            variant="ghost"
-                            color="gray"
-                            icon="i-lucide-arrow-up"
-                            size="sm"
-                            class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all duration-300 hover:scale-110"
-                            aria-label="Retour en haut"
-                            @click="scrollToTop"
-                        />
-                    </div>
-                </footer>
+                </div>
             </div>
         </UContainer>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-50 dark:bg-zinc-800 py-16">
+            <UContainer>
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center">
+                        <div class="flex gap-6 mb-8">
+                            <a
+                                v-for="(social, index) in socialLinks"
+                                :key="index"
+                                :href="social.url"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-lime-500 dark:hover:text-lime-400 transition-colors"
+                                :aria-label="social.label"
+                            >
+                                <UIcon :name="social.icon" class="size-5" />
+                            </a>
+                        </div>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                            &copy; {{ new Date().getFullYear() }} Laravel Jutsu
+                            <span class="mx-2">•</span>
+                            Fait avec <span class="text-lime-500 dark:text-lime-400">💚</span>
+                        </p>
+                    </div>
+                </div>
+            </UContainer>
+        </footer>
     </div>
 </template>
 
@@ -503,36 +292,6 @@ const isDark = computed({
     }
 });
 
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
-
-useHead({
-    title: 'Laravel Jutsu - Maîtriser Laravel & Nuxt',
-    meta: [
-        { name: 'robots', content: 'index, follow' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
-        { name: 'author', content: 'Ludovic Guénet' },
-        { property: 'og:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
-        { property: 'og:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.laraveljutsu.net' },
-        { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.png' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
-        { name: 'twitter:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.png' }
-    ],
-    link: [
-        { rel: 'canonical', href: 'https://www.laraveljutsu.net' }
-    ]
-});
-
 const usesData = {
     editor: [
         { name: "Visual Studio Code", description: "With minimal settings" },
@@ -554,6 +313,32 @@ const usesData = {
         { name: "Keyboard", description: "Logitech Wireless Keyboard" },
         { name: "Mouse", description: "Logitech Wireless Mouse" }
     ]
+};
+
+const socialLinks = [
+    { url: "https://www.youtube.com/@LaravelJutsu", icon: "i-lucide-youtube", label: "YouTube" },
+    { url: "https://github.com/ludoguenet", icon: "i-lucide-github", label: "GitHub" },
+    { url: "https://twitter.com/LaravelJutsu", icon: "i-lucide-twitter", label: "Twitter" },
+    { url: "https://bsky.app/profile/laraveljutsu.bsky.social", icon: "i-lucide-cloud", label: "BlueSky" },
+    { url: "https://www.linkedin.com/in/ludoguenet/", icon: "i-lucide-linkedin", label: "LinkedIn" }
+];
+
+const getCategoryIcon = (category) => {
+    switch (category) {
+        case 'editor': return 'i-lucide-code';
+        case 'apps': return 'i-lucide-app-window';
+        case 'hardware': return 'i-lucide-cpu';
+        default: return 'i-lucide-file';
+    }
+};
+
+const getCategoryTitle = (category) => {
+    switch (category) {
+        case 'editor': return 'Éditeur';
+        case 'apps': return 'Applications';
+        case 'hardware': return 'Matériel';
+        default: return category;
+    }
 };
 
 const getItemIcon = (category, name) => {
@@ -585,4 +370,27 @@ const getItemIcon = (category, name) => {
 
     return null;
 };
+
+useHead({
+    title: 'Laravel Jutsu - Maîtriser Laravel & Nuxt',
+    meta: [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
+        { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
+        { name: 'author', content: 'Ludovic Guénet' },
+        { property: 'og:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
+        { property: 'og:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://www.laraveljutsu.net' },
+        { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
+        { name: 'twitter:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
+        { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.png' }
+    ],
+    link: [
+        { rel: 'canonical', href: 'https://www.laraveljutsu.net' }
+    ]
+});
 </script>
