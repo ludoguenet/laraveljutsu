@@ -1,387 +1,98 @@
 <template>
-    <div class="min-h-screen bg-white dark:bg-zinc-900 transition-colors duration-300">
-        <!-- Hero Section -->
-        <div class="relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-lime-50 to-lime-100 dark:from-zinc-800 dark:to-zinc-900 opacity-50" />
-            <UContainer class="relative py-16">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <img src="/img/logo.svg" alt="Logo" class="size-16">
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <UButton
-                            to="https://www.youtube.com/@LaravelJutsu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            color="primary"
-                            icon="i-lucide-youtube"
-                            size="xs"
-                            class="hover:bg-lime-600"
-                        >
-                            YouTube
-                        </UButton>
-                        <UButton
-                            to="https://github.com/ludoguenet"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="outline"
-                            icon="i-lucide-github"
-                            size="xs"
-                            class="dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
-                        >
-                            GitHub
-                        </UButton>
-                        <UButton
-                            color="gray"
-                            variant="ghost"
-                            :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
-                            aria-label="Basculer en mode sombre"
-                            class="hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all duration-300"
-                            @click="isDark = !isDark"
-                        />
-                    </div>
-                </div>
-            </UContainer>
+  <div class="min-h-screen flex flex-col bg-[#f8f8f3] text-zinc-900 dark:bg-zinc-900 transition-colors duration-300">
+    <!-- Hero Section -->
+    <div class="py-12 md:py-20">
+      <div class="max-w-5xl mx-auto px-4">
+        <!-- Icons and Email Row -->
+        <div class="flex justify-between items-center mb-8">
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500"><UIcon name="i-lucide-github" class="text-xl" /></a>
+            <a href="https://linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500"><UIcon name="i-lucide-linkedin" class="text-xl" /></a>
+            <a href="https://x.com/laraveljutsu" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500"><UIcon name="i-lucide-twitter" class="text-xl" /></a>
+          </div>
+          <span class="text-sm font-semibold text-zinc-500">ludo@epekta.com</span>
         </div>
-
-        <!-- Main Content -->
-        <UContainer class="py-16">
-            <!-- Laravel 12 Series -->
-            <div class="mb-24">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl font-bold text-center mb-12">Apprendre Laravel 12</h2>
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-xl font-semibold">Série vidéo complète</h3>
-                            <p class="text-zinc-600 dark:text-zinc-400">
-                                Découvrez ma nouvelle série de tutoriels vidéo pour apprendre Laravel 12 de A à Z.
-                                Que vous soyez débutant ou développeur expérimenté, cette série vous guidera à travers
-                                toutes les fonctionnalités de Laravel 12 avec des exemples concrets et des projets pratiques.
-                            </p>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-4" />
-                                    <span class="text-sm">De zéro à expert</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-4" />
-                                    <span class="text-sm">Projets pratiques</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-4" />
-                                    <span class="text-sm">Contenu mis à jour</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <UIcon name="i-lucide-check-circle" class="text-lime-500 dark:text-lime-400 size-4" />
-                                    <span class="text-sm">Support communautaire</span>
-                                </div>
-                            </div>
-                            <div class="mt-6">
-                                <UButton
-                                    to="https://apprendre-laravel-12.net"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    color="primary"
-                                    icon="i-lucide-video"
-                                    size="md"
-                                    class="hover:bg-lime-600"
-                                >
-                                    Accéder à la série
-                                </UButton>
-                            </div>
-                        </div>
-                        <div class="relative aspect-video rounded-lg overflow-hidden">
-                            <img src="/img/apprendre-laravel-12.jpg" alt="Série Laravel 12" class="absolute inset-0 w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent" />
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <UIcon name="i-lucide-play-circle" class="size-12 text-white opacity-90 hover:opacity-100 transition-opacity" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Consulting Section -->
-            <div class="mb-24">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl font-bold text-center mb-12">Consulting</h2>
-                    <div class="bg-white dark:bg-zinc-800 rounded-xl p-8">
-                        <div class="max-w-2xl mx-auto text-center">
-                            <UIcon name="i-lucide-calendar" class="size-12 mx-auto mb-6 text-lime-500 dark:text-lime-400" />
-                            <h3 class="text-xl font-semibold mb-4">Besoin d'un coup de pouce ?</h3>
-                            <p class="text-zinc-600 dark:text-zinc-400 mb-6">
-                                Profitez d'un accompagnement personnalisé pour vos projets Laravel et Nuxt.
-                            </p>
-                            <UButton
-                                to="https://cal.com/laraveljutsu"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                color="primary"
-                                icon="i-lucide-calendar"
-                                size="md"
-                                class="hover:bg-lime-600"
-                            >
-                                Prendre RDV
-                            </UButton>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Latest Video -->
-            <div class="mb-24">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl font-bold text-center mb-12">Dernière vidéo</h2>
-                    <div v-if="video" class="bg-white dark:bg-zinc-800 rounded-xl overflow-hidden">
-                        <div class="aspect-video">
-                            <iframe
-                                :src="`https://www.youtube.com/embed/${video.id}`"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            />
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold mb-3">{{ video.title }}</h3>
-                            <div class="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 text-sm mb-4">
-                                <UIcon name="i-lucide-calendar" class="size-4" />
-                                <span>{{ video.published }}</span>
-                            </div>
-                            <UButton
-                                :to="`https://www.youtube.com/watch?v=${video.id}`"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                color="error"
-                                icon="i-lucide-youtube"
-                                size="md"
-                                class="hover:bg-red-600"
-                            >
-                                Regarder sur YouTube
-                            </UButton>
-                        </div>
-                    </div>
-                    <div v-else class="flex justify-center items-center p-12">
-                        <UProgress animation="swing" color="primary" class="w-20" />
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools Section -->
-            <div class="mb-24">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl font-bold text-center mb-12">Mes Outils</h2>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div v-for="(category, categoryName) in usesData" :key="categoryName" class="space-y-4">
-                            <div class="flex items-center gap-2">
-                                <UIcon :name="getCategoryIcon(categoryName)" class="text-lime-500 dark:text-lime-400 size-4" />
-                                <h3 class="text-base font-semibold">{{ getCategoryTitle(categoryName) }}</h3>
-                            </div>
-                            <div class="space-y-3">
-                                <div
-                                    v-for="(item, index) in category"
-                                    :key="index"
-                                    class="p-3 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:border-lime-400 dark:hover:border-lime-500 transition-colors"
-                                >
-                                    <div class="flex items-center gap-2">
-                                        <UIcon
-                                            :name="getItemIcon(categoryName, item.name)"
-                                            class="text-zinc-500 dark:text-zinc-400 size-4"
-                                        />
-                                        <div>
-                                            <span class="text-sm font-medium">{{ item.name }}</span>
-                                            <p class="text-xs text-zinc-500 dark:text-zinc-400">{{ item.description }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </UContainer>
-
-        <!-- Footer -->
-        <footer class="bg-zinc-50 dark:bg-zinc-800 py-12">
-            <UContainer>
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex flex-col items-center">
-                        <div class="flex gap-4 mb-6">
-                            <a
-                                v-for="(social, index) in socialLinks"
-                                :key="index"
-                                :href="social.url"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-zinc-600 dark:text-zinc-400 hover:text-lime-500 dark:hover:text-lime-400 transition-colors"
-                                :aria-label="social.label"
-                            >
-                                <UIcon :name="social.icon" class="size-4" />
-                            </a>
-                        </div>
-                        <p class="text-xs text-zinc-500 dark:text-zinc-400">
-                            &copy; {{ new Date().getFullYear() }} Laravel Jutsu
-                            <span class="mx-2">•</span>
-                            Fait avec <span class="text-lime-500 dark:text-lime-400">💚</span>
-                        </p>
-                    </div>
-                </div>
-            </UContainer>
-        </footer>
+        <!-- Image and Text Row -->
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="flex-shrink-0">
+            <img src="/img/avatar.webp" alt="Ludovic Guénet" class="rounded-2xl w-64 h-64 object-cover shadow-lg border-4 border-white" >
+          </div>
+          <div class="flex-1 flex flex-col items-start">
+            <p class="mb-2 text-zinc-500 dark:text-zinc-300">Hello, je suis Ludovic <span>🪃</span></p>
+            <h1 class="text-5xl md:text-6xl font-black mb-2 leading-tight">
+              THE <span class="text-lime-500">*</span><br>
+              <span class="text-zinc-900 dark:text-white">LEGENDARY</span> <span class="text-lime-500">SAMURAÏ</span>
+            </h1>
+            <p class="mb-6 text-lg text-zinc-600 dark:text-zinc-300 max-w-lg">Disponible pour missions freelance développeur web.<br>Pour une application moderne, efficace et élégante.</p>
+            <a href="https://linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 hover:bg-lime-500 text-white hover:text-zinc-900 font-semibold px-8 py-3 rounded-full transition-colors text-lg shadow">ON EN DISCUTE ?</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- About Section -->
+    <section class="bg-lime-500 py-16">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
+        <div class="flex-1 flex flex-col items-start mb-8 md:mb-0">
+          <h2 class="text-3xl font-black text-zinc-900 mb-4">ABOUT <span class="italic text-white">ME</span></h2>
+          <a href="https://youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 hover:bg-white text-white hover:text-lime-500 font-semibold px-6 py-3 rounded-full transition-colors text-lg shadow">EN SAVOIR PLUS</a>
+        </div>
+        <div class="flex-1 text-lg text-white">
+          Je suis un expert en <span class="underline font-semibold">PHP</span>, <span class="underline font-semibold">Laravel</span>, <span class="underline font-semibold">Vue.js</span> et <span class="underline font-semibold">Nuxt.js</span>.<br>
+          J'aime créer des applications web modernes, performantes et élégantes. Avec une expertise technique solide et une attention particulière aux détails, je développe des solutions robustes et maintenables.
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-6 border-t border-zinc-200 dark:border-zinc-700">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">
+            © 2024 Ludovic Guénet. Tous droits réservés.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
+              <UIcon name="i-lucide-github" class="text-xl" />
+            </a>
+            <a href="https://www.linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
+              <UIcon name="i-lucide-linkedin" class="text-xl" />
+            </a>
+            <a href="https://x.com/laraveljutsu" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
+              <UIcon name="i-lucide-twitter" class="text-xl" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
-
-const video = ref(null);
-
-const fetchLatestVideo = async () => {
-    try {
-        const response = await fetch('/api/latest-video');
-        const xmlText = await response.text();
-
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(xmlText, 'text/xml');
-
-        const latestEntry = xml.querySelector('entry');
-
-        if (!latestEntry) {
-            console.error('No entries found in RSS feed');
-            return;
-        }
-
-        const videoIdElement = latestEntry.querySelector('yt\\:videoId, videoId');
-        const titleElement = latestEntry.querySelector('title');
-        const publishedElement = latestEntry.querySelector('published');
-
-        if (!videoIdElement || !titleElement || !publishedElement) {
-            console.error('Missing elements in the XML feed');
-            return;
-        }
-
-        video.value = {
-            id: videoIdElement.textContent,
-            title: titleElement.textContent,
-            published: new Date(publishedElement.textContent).toLocaleDateString(),
-        };
-    } catch (error) {
-        console.error('Error fetching video:', error);
-    }
-};
-
-onMounted(fetchLatestVideo);
-
-const colorMode = useColorMode();
-
-const isDark = computed({
-    get() {
-        return colorMode.value === 'dark'
-    },
-    set() {
-        colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-    }
-});
-
-const usesData = {
-    editor: [
-        { name: "Visual Studio Code", description: "With minimal settings" },
-        { name: "Font", description: "JetBrains Mono" },
-        { name: "Theme", description: "Xiaolu Abei Light" },
-        { name: "Icons", description: "Seti Icons" }
-    ],
-    apps: [
-        { name: "Browser", description: "Brave" },
-        { name: "Valet Linux Plus", description: "Local development environment" },
-        { name: "Adminer", description: "Database management" },
-        { name: "Insomnia", description: "API client and testing tool" }
-    ],
-    hardware: [
-        { name: "Computer", description: "Lenovo ThinkPad P16s Gen 3" },
-        { name: "Memory", description: "32 GB RAM" },
-        { name: "Storage", description: "1TB SK Hynix SSD" },
-        { name: "Display", description: "15.6\" 1920x1200 IPS" },
-        { name: "Keyboard", description: "Logitech Wireless Keyboard" },
-        { name: "Mouse", description: "Logitech Wireless Mouse" }
-    ]
-};
-
-const socialLinks = [
-    { url: "https://www.youtube.com/@LaravelJutsu", icon: "i-lucide-youtube", label: "YouTube" },
-    { url: "https://github.com/ludoguenet", icon: "i-lucide-github", label: "GitHub" },
-    { url: "https://twitter.com/LaravelJutsu", icon: "i-lucide-twitter", label: "Twitter" },
-    { url: "https://bsky.app/profile/laraveljutsu.bsky.social", icon: "i-lucide-cloud", label: "BlueSky" },
-    { url: "https://www.linkedin.com/in/ludoguenet/", icon: "i-lucide-linkedin", label: "LinkedIn" }
-];
-
-const getCategoryIcon = (category) => {
-    switch (category) {
-        case 'editor': return 'i-lucide-code';
-        case 'apps': return 'i-lucide-app-window';
-        case 'hardware': return 'i-lucide-cpu';
-        default: return 'i-lucide-file';
-    }
-};
-
-const getCategoryTitle = (category) => {
-    switch (category) {
-        case 'editor': return 'Éditeur';
-        case 'apps': return 'Applications';
-        case 'hardware': return 'Matériel';
-        default: return category;
-    }
-};
-
-const getItemIcon = (category, name) => {
-    if (category === 'hardware') {
-        if (name.includes('Microphone')) return 'i-lucide-mic';
-        if (name.includes('Headphones')) return 'i-lucide-headphones';
-        if (name.includes('Keyboard')) return 'i-lucide-keyboard';
-        if (name.includes('Camera')) return 'i-lucide-camera';
-        if (name.includes('Display')) return 'i-lucide-monitor';
-        if (name.includes('Mouse')) return 'i-lucide-mouse-pointer';
-        return 'i-lucide-cpu';
-    }
-
-    if (category === 'editor') {
-        if (name.includes('Visual Studio')) return 'i-lucide-code';
-        if (name.includes('Font')) return 'i-lucide-type';
-        if (name.includes('Theme')) return 'i-lucide-palette';
-        if (name.includes('Icons')) return 'i-lucide-image';
-        return 'i-lucide-file-code';
-    }
-
-    if (category === 'apps') {
-        if (name.includes('Browser')) return 'i-lucide-globe';
-        if (name.includes('Valet')) return 'i-lucide-server';
-        if (name.includes('Adminer')) return 'i-lucide-database';
-        if (name.includes('Insomnia')) return 'i-lucide-network';
-        return 'i-lucide-app-window';
-    }
-
-    return null;
-};
-
+// Page inspirée du template fourni, tout en français
 useHead({
-    title: 'Laravel Jutsu - Maîtriser Laravel & Nuxt',
-    meta: [
-        { name: 'robots', content: 'index, follow' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { name: 'keywords', content: 'Laravel, Nuxt, Web Development, Tutorials, Consulting' },
-        { name: 'author', content: 'Ludovic Guénet' },
-        { property: 'og:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
-        { property: 'og:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.laraveljutsu.net' },
-        { property: 'og:image', content: 'https://www.laraveljutsu.net/img/logo.png' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Laravel Jutsu - Maîtriser Laravel & Nuxt' },
-        { name: 'twitter:description', content: 'Les ressources essentielles pour maîtriser Laravel & Nuxt.' },
-        { name: 'twitter:image', content: 'https://www.laraveljutsu.net/img/logo.png' }
-    ],
-    link: [
-        { rel: 'canonical', href: 'https://www.laraveljutsu.net' }
-    ]
-});
+  title: 'Ludovic Guénet - Développeur Web Laravel & Vue.js',
+  meta: [
+    { name: 'description', content: 'Développeur web freelance expert en PHP, Laravel, Vue.js et Nuxt.js. Création d\'applications web modernes, performantes et élégantes.' },
+    { name: 'keywords', content: 'développeur web, freelance, PHP, Laravel, Vue.js, Nuxt.js, application web' },
+    { name: 'author', content: 'Ludovic Guénet' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'robots', content: 'index, follow' },
+    // Open Graph / Facebook
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://laraveljutsu.com/' },
+    { property: 'og:title', content: 'Ludovic Guénet - Développeur Web Laravel & Vue.js' },
+    { property: 'og:description', content: 'Développeur web freelance expert en PHP, Laravel, Vue.js et Nuxt.js. Création d\'applications web modernes, performantes et élégantes.' },
+    { property: 'og:image', content: 'https://laraveljutsu.com/img/avatar.webp' },
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:url', content: 'https://laraveljutsu.com/' },
+    { name: 'twitter:title', content: 'Ludovic Guénet - Développeur Web Laravel & Vue.js' },
+    { name: 'twitter:description', content: 'Développeur web freelance expert en PHP, Laravel, Vue.js et Nuxt.js. Création d\'applications web modernes, performantes et élégantes.' },
+    { name: 'twitter:image', content: 'https://laraveljutsu.com/img/avatar.webp' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://laraveljutsu.com/' }
+  ]
+})
 </script>
