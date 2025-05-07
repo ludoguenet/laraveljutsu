@@ -61,7 +61,7 @@
       <div class="max-w-5xl mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-sm text-zinc-500 dark:text-zinc-400">
-            © 2024 Ludovic Guénet. Tous droits réservés.
+            © {{ new Date().getFullYear() }} Ludovic Guénet. Tous droits réservés.
           </p>
           <div class="flex items-center gap-4">
             <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
