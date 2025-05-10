@@ -42,7 +42,7 @@ This is a multi-establishment hospital scheduling and leave management system bu
 
 ## High-Level Guidelines
 
-- Use PHP 8.2+ features where appropriate
+- Use PHP 8.3+ features where appropriate
 - Follow Laravel 12 conventions and best practices
 - Create code with excellent developer experience (DX)
 - Ensure type safety with comprehensive docblocks
@@ -431,7 +431,9 @@ By embracing this approach, you can harness the power of AI-assisted development
 ## Resources
 
 - [Official Laravel Documentation](mdc:https:/laravel.com/docs)
-- [PHP 8.2 Release Notes](mdc:https:/www.php.net/releases/8.2/en.php)
+- [PHP 8.3 Release Notes](mdc:https:/www.php.net/releases/8.3/en.php)
 - [Pest PHP Testing Framework](mdc:https:/pestphp.com)
 - [Laravel Best Practices](mdc:https:/github.com/alexeymezenin/laravel-best-practices)
 - [Spatie Laravel Permissions](mdc:https:/github.com/spatie/laravel-permission)
+- [How to write great Cursor Rules](mdc:https:/trigger.dev/blog/cursor-rules)
+- [Cursor AI Rules for Laravel 11+ Structure](mdc:https://www.youtube.com/watch?v=ARMKcVLps_c)
