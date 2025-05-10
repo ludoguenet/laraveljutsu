@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     nitro: {
         static: true,
-      },
+    },
 
   devtools: { enabled: true },
 
