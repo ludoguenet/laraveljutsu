@@ -7,20 +7,20 @@
         <div class="flex justify-between items-center mb-8">
           <div class="flex items-center gap-4">
             <a href="https://github.com/ludoguenet" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
-              <Icon name="uil:github" class="text-lg" />
+              <UIcon name="i-lucide-github" class="text-lg" />
             </a>
             <a href="https://linkedin.com/in/ludoguenet" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
-              <Icon name="uil:linkedin" class="text-lg" />
+              <UIcon name="i-lucide-linkedin" class="text-lg" />
             </a>
             <a href="https://x.com/laraveljutsu" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
-              <Icon name="uil:twitter" class="text-lg" />
+              <UIcon name="i-lucide-twitter" class="text-lg" />
             </a>
             <button
               class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300"
               :aria-label="$colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
               @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'"
             >
-              <Icon :name="$colorMode.value === 'dark' ? 'uil:sun' : 'uil:moon'" class="text-lg" />
+              <UIcon :name="$colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'" class="text-lg" />
             </button>
           </div>
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 dark:text-zinc-200 underline">ludo@epekta.com</a>
@@ -118,13 +118,13 @@
           </p>
           <div class="flex items-center gap-4">
             <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
-              <Icon name="uil:github" class="text-xl" />
+              <UIcon name="i-lucide-github" class="text-xl" />
             </a>
             <a href="https://www.linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
-              <Icon name="uil:linkedin" class="text-xl" />
+              <UIcon name="i-lucide-linkedin" class="text-xl" />
             </a>
             <a href="https://x.com/laraveljutsu" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 dark:text-zinc-400 dark:hover:text-lime-500 transition-colors">
-              <Icon name="uil:twitter" class="text-xl" />
+              <UIcon name="i-lucide-twitter" class="text-xl" />
             </a>
           </div>
         </div>
