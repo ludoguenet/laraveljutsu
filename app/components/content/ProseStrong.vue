@@ -1,5 +1,5 @@
 <template>
-  <strong class="text-zinc-900 dark:text-white font-bold">
+  <strong class="text-zinc-900 font-bold">
     <slot />
   </strong>
 </template>

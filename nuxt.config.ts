@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/color-mode', '@nuxt/content', '@nuxt/icon'],
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/content', '@nuxt/icon'],
 
   app: {
     head: {
@@ -26,11 +26,6 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-11-27',
-
-  colorMode: {
-    preference: 'light',
-    fallback: 'light'
-  },
 
   content: {
     build: {

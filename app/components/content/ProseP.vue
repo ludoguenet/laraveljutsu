@@ -1,5 +1,5 @@
 <template>
-  <p class="text-zinc-600 dark:text-zinc-300 mb-6">
+  <p class="text-zinc-600 mb-6">
     <slot />
   </p>
 </template>
