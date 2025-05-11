@@ -20,7 +20,7 @@
               :aria-label="$colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
               @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'"
             >
-              <UIcon :name="$colorMode.value === 'dark' ? 'i-mdi-white-balance-sunny' : 'i-mdi-moon-waning-crescent'" class="text-lg" />
+              <UIcon :name="$colorMode.value === 'dark' ? 'i-mdi-weather-sunny' : 'i-mdi-moon-waning-crescent'" class="text-lg" />
             </button>
           </div>
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 dark:text-zinc-200 underline">ludo@epekta.com</a>
