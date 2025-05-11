@@ -5,7 +5,7 @@
         <!-- Back Button -->
         <div class="mb-8">
           <NuxtLink to="/" class="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-300 hover:text-lime-500 dark:hover:text-lime-500 transition-colors">
-            <UIcon name="i-lucide-arrow-left" class="text-lg" />
+            <UIcon name="i-mdi-arrow-left" class="text-lg" />
             <span>Back to Home</span>
           </NuxtLink>
         </div>

@@ -18,7 +18,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.42",
+    "@iconify-json/mdi": "^1.2.3",
     "@nuxt/content": "^3.5.1",
     "@nuxt/eslint": "^1.0.1",
     "@nuxtjs/color-mode": "^3.5.2",
