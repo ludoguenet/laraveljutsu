@@ -24,6 +24,7 @@
             </button>
           </div>
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 dark:text-zinc-200 underline">ludo@epekta.com</a>
+          <UIcon name="i-mdi-email" class="text-lg" />
         </div>
         <!-- Image and Text Row -->
         <div class="flex flex-col md:flex-row items-center gap-32">
