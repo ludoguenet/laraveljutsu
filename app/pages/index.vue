@@ -15,16 +15,21 @@
             <a href="https://x.com/laraveljutsu" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
               <UIcon name="i-mdi-twitter" class="text-lg" />
             </a>
-            <button
-              class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300"
-              :aria-label="$colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-              @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'"
+            <ColorScheme
+            placeholder="..."
+            tag="span"
+            class="text-zinc-500 hover:text-lime-500 transition-colors duration-300"
             >
-              <UIcon :name="$colorMode.value === 'dark' ? 'i-mdi-weather-sunny' : 'i-mdi-moon-waning-crescent'" class="text-lg" />
-            </button>
+                <button
+                :aria-label="$colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+                class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300"
+                      @click="$colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'"
+                >
+                    <UIcon name="i-mdi-theme-light-dark" class="text-lg" />
+                </button>
+            </ColorScheme>
           </div>
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 dark:text-zinc-200 underline">ludo@epekta.com</a>
-          <UIcon name="i-mdi-email" class="text-lg" />
         </div>
         <!-- Image and Text Row -->
         <div class="flex flex-col md:flex-row items-center gap-32">
