@@ -147,23 +147,23 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     // Open Graph / Facebook
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://laraveljutsu.com/' },
+    { property: 'og:url', content: 'https://laraveljutsu.net/' },
     { property: 'og:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { property: 'og:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { property: 'og:image', content: 'https://laraveljutsu.com/img/avatar.webp' },
+    { property: 'og:image', content: 'https://laraveljutsu.net/img/avatar.webp' },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: 'LaravelJutsu' },
     { property: 'og:see_also', content: 'https://youtube.com/@LaravelJutsu' },
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:url', content: 'https://laraveljutsu.com/' },
+    { name: 'twitter:url', content: 'https://laraveljutsu.net/' },
     { name: 'twitter:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { name: 'twitter:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { name: 'twitter:image', content: 'https://laraveljutsu.com/img/avatar.webp' },
+    { name: 'twitter:image', content: 'https://laraveljutsu.net/img/avatar.webp' },
     { name: 'twitter:site', content: '@laraveljutsu' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://laraveljutsu.com/' }
+    { rel: 'canonical', href: 'https://laraveljutsu.net/' }
   ],
   script: [
     {
@@ -172,7 +172,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ludovic Guénet",
-        "url": "https://laraveljutsu.com/",
+        "url": "https://laraveljutsu.net/",
         "sameAs": [
           "https://youtube.com/@LaravelJutsu",
           "https://github.com/ludoguenet",
