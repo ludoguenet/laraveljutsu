@@ -15,8 +15,8 @@
             <a href="https://x.com/laraveljutsu" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
               <UIcon name="i-mdi-twitter" class="text-lg" />
             </a>
-            <a href="https://app.collective.work/collective/ludovic-guenet-ykq/" aria-label="Collective.work" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
-              <UIcon name="i-mdi-briefcase" class="text-lg" />
+            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Malt" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
+              <UIcon name="i-mdi-handshake" class="text-lg" />
             </a>
           </div>
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 underline">ludo@epekta.com</a>
@@ -122,8 +122,8 @@
             <a href="https://x.com/laraveljutsu" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
               <UIcon name="i-mdi-twitter" class="text-xl" />
             </a>
-            <a href="https://app.collective.work/collective/ludovic-guenet-ykq/" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
-              <UIcon name="i-mdi-briefcase" class="text-xl" />
+            <a href="https://www.malt.fr/profile/ludovicguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
+              <UIcon name="i-mdi-handshake" class="text-xl" />
             </a>
           </div>
         </div>
@@ -184,7 +184,7 @@ useHead({
           "https://github.com/ludoguenet",
           "https://linkedin.com/in/ludoguenet",
           "https://x.com/laraveljutsu",
-          "https://app.collective.work/collective/ludovic-guenet-ykq/"
+          "https://www.malt.fr/profile/ludovicguenet"
         ],
         "jobTitle": "Freelance Web Developer",
         "description": "Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions."
