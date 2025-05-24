@@ -22,10 +22,10 @@
           <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-bold text-zinc-900 underline">ludo@epekta.com</a>
         </div>
         <!-- Image and Text Row -->
-        <div class="flex flex-col md:flex-row items-center gap-32">
+        <div class="flex flex-col md:flex-row items-center space-y-16 md:space-y-0 md:gap-32">
           <div class="flex-shrink-0 relative">
-            <div class="absolute -inset-6 bg-lime-500/10 rounded-2xl -rotate-6 pointer-events-none z-0"/>
-            <img src="/img/avatar.webp" alt="Ludovic Guénet" class="relative rounded-2xl w-80 h-80 object-cover shadow-lg z-10">
+            <div class="absolute -inset-4 sm:-inset-6 bg-lime-500/10 rounded-2xl -rotate-6 pointer-events-none z-0"/>
+            <img src="/img/avatar.webp" alt="Ludovic Guénet" class="relative rounded-2xl w-64 h-64 sm:w-80 sm:h-80 object-cover shadow-lg z-10">
           </div>
           <div class="flex-1 flex flex-col items-start">
             <p class="mb-2 text-zinc-500">— Hello, I'm Ludovic 👋</p>
