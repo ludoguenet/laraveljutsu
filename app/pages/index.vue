@@ -32,8 +32,10 @@
               width="320"
               height="320"
               loading="eager"
-              sizes="sm:320px md:320px"
-              quality="80"
+              sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, 320px"
+              quality="75"
+              placeholder
+              format="webp"
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
