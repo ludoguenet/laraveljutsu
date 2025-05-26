@@ -39,6 +39,8 @@
               preset="avatar"
               preload
               fetchpriority="high"
+              decoding="async"
+              importance="high"
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
@@ -184,7 +186,9 @@ useHead({
   ],
   link: [
     { rel: 'canonical', href: 'https://laraveljutsu.net/' },
-    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp', fetchpriority: 'high' }
+    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp', fetchpriority: 'high' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
   ],
   script: [
     {
