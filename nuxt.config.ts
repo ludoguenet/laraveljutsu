@@ -57,8 +57,26 @@ export default defineNuxtConfig({
   },
 
   image: {
-    quality: 80,
+    quality: 75,
     format: ['webp'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'webp',
+          width: 320,
+          height: 320,
+          quality: 75
+        }
+      }
+    }
   },
 
   experimental: {
@@ -74,7 +92,17 @@ export default defineNuxtConfig({
         output: {
           manualChunks: {
             'vendor': ['vue', 'vue-router'],
+            'ui': ['@nuxt/ui'],
+            'icons': ['@nuxt/icon']
           }
+        }
+      },
+      chunkSizeWarningLimit: 1000,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
         }
       }
     }

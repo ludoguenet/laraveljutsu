@@ -36,7 +36,9 @@
               quality="75"
               placeholder
               format="webp"
+              preset="avatar"
               preload
+              fetchpriority="high"
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
@@ -182,7 +184,7 @@ useHead({
   ],
   link: [
     { rel: 'canonical', href: 'https://laraveljutsu.net/' },
-    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp' }
+    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp', fetchpriority: 'high' }
   ],
   script: [
     {
