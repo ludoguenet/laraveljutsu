@@ -28,9 +28,12 @@
             <NuxtImg
               src="/images/avatar.webp"
               alt="Ludovic Guénet"
-              class="relative rounded-2xl w-64 h-64 sm:w-80 sm:h-80 object-cover shadow-lg z-10"
+              class="relative rounded-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover shadow-lg z-10"
               width="320"
               height="320"
+              loading="eager"
+              sizes="sm:320px md:320px"
+              quality="80"
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
