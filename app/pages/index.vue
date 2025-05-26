@@ -36,6 +36,7 @@
               quality="75"
               placeholder
               format="webp"
+              preload
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
@@ -180,12 +181,12 @@ useHead({
     { name: 'twitter:site', content: '@laraveljutsu' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://laraveljutsu.net/' }
+    { rel: 'canonical', href: 'https://laraveljutsu.net/' },
+    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp' }
   ],
   script: [
     {
-      type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ludovic Guénet",
@@ -199,7 +200,8 @@ useHead({
         ],
         "jobTitle": "Freelance Web Developer",
         "description": "Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions."
-      })
+      }),
+      type: 'application/ld+json'
     }
   ]
 })

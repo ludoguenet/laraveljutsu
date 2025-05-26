@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     nitro: {
         static: true,
+        compressPublicAssets: true,
     },
 
   devtools: { enabled: true },
@@ -15,7 +16,10 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap'
         }
-      ]
+      ],
+      htmlAttrs: {
+        lang: 'en'
+      }
     }
   },
 
@@ -55,5 +59,24 @@ export default defineNuxtConfig({
   image: {
     quality: 80,
     format: ['webp'],
+  },
+
+  experimental: {
+    payloadExtraction: true,
+    renderJsonPayloads: true,
+    treeshakeClientOnly: true,
+  },
+
+  vite: {
+    build: {
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor': ['vue', 'vue-router'],
+          }
+        }
+      }
+    }
   }
 })
