@@ -6,16 +6,16 @@
         <!-- Icons and Email Row -->
         <div class="flex justify-between items-center mb-8">
           <div class="flex items-center gap-4">
-            <a href="https://github.com/ludoguenet" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
+            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-600 text-zinc-500 hover:text-lime-600 transition-colors duration-300">
               <UIcon name="i-mdi-github" class="text-lg" />
             </a>
-            <a href="https://linkedin.com/in/ludoguenet" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
+            <a href="https://linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-600 text-zinc-500 hover:text-lime-600 transition-colors duration-300">
               <UIcon name="i-mdi-linkedin" class="text-lg" />
             </a>
-            <a href="https://x.com/laraveljutsu" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
+            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-600 text-zinc-500 hover:text-lime-600 transition-colors duration-300">
               <UIcon name="i-mdi-twitter" class="text-lg" />
             </a>
-            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Malt" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-500 text-zinc-500 hover:text-lime-500 transition-colors duration-300">
+            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full border border-zinc-500 hover:border-lime-600 text-zinc-500 hover:text-lime-600 transition-colors duration-300">
               <UIcon name="i-mdi-handshake" class="text-lg" />
             </a>
           </div>
@@ -40,14 +40,14 @@
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
-            <p class="mb-2 text-zinc-500">— Hello, I'm Ludovic 👋</p>
+            <p class="mb-2 text-zinc-600">— Hello, I'm Ludovic 👋</p>
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-2 leading-tight tracking-tight">
-              THE <span class="text-lime-500">*</span><br>
-              <span class="text-zinc-900">LEGENDARY</span> <span class="text-lime-500">SAMURAÏ</span>
+              THE <span class="text-lime-600">*</span><br>
+              <span class="text-zinc-900">LEGENDARY</span> <span class="text-lime-600">SAMURAÏ</span>
             </h1>
             <p class="mb-6 text-lg text-zinc-700 max-w-lg">Available for freelance web development missions.<br>For a modern, efficient, and elegant application.</p>
             <div class="flex flex-row gap-4 mb-4">
-              <a href="https://linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 hover:bg-lime-500 text-white hover:text-zinc-900 font-medium px-6 py-2.5 min-w-[140px] text-center rounded-full transition-colors text-sm shadow focus:outline-none focus:ring-2 focus:ring-lime-500">LET'S TALK</a>
+              <a href="https://linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 hover:bg-lime-600 text-white hover:text-zinc-900 font-medium px-6 py-2.5 min-w-[140px] text-center rounded-full transition-colors text-sm shadow focus:outline-none focus:ring-2 focus:ring-lime-600">LET'S TALK</a>
             </div>
           </div>
         </div>
@@ -96,13 +96,13 @@
                 :to="latestPost.path"
                 class="block max-w-2xl p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
               >
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                   {{ latestPost.title }}
-                </h5>
+                </h2>
                 <p class="font-normal text-gray-700">
                   {{ latestPost.description }}
                 </p>
-                <div class="flex items-center gap-4 text-sm text-zinc-500 mt-4">
+                <div class="flex items-center gap-4 text-sm text-zinc-600 mt-4">
                   <span>{{ new Date(latestPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
                   <span>•</span>
                   <span>{{ latestPost.author }}</span>
@@ -125,16 +125,16 @@
             © {{ new Date().getFullYear() }} Ludovic Guénet. All rights reserved.
           </p>
           <div class="flex items-center gap-4">
-            <a href="https://github.com/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
+            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-lime-600 transition-colors">
               <UIcon name="i-mdi-github" class="text-xl" />
             </a>
-            <a href="https://www.linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
+            <a href="https://www.linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-lime-600 transition-colors">
               <UIcon name="i-mdi-linkedin" class="text-xl" />
             </a>
-            <a href="https://x.com/laraveljutsu" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
+            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-lime-600 transition-colors">
               <UIcon name="i-mdi-twitter" class="text-xl" />
             </a>
-            <a href="https://www.malt.fr/profile/ludovicguenet" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-lime-500 transition-colors">
+            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-lime-600 transition-colors">
               <UIcon name="i-mdi-handshake" class="text-xl" />
             </a>
           </div>
