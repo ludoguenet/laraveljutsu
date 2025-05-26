@@ -33,7 +33,7 @@
               height="320"
               loading="eager"
               sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, 320px"
-              quality="75"
+              quality="60"
               placeholder
               format="webp"
               preset="avatar"
@@ -41,6 +41,11 @@
               fetchpriority="high"
               decoding="async"
               importance="high"
+              srcset="
+                /_vercel/image?url=%2Fimages%2Favatar.webp&w=192&q=60 192w,
+                /_vercel/image?url=%2Fimages%2Favatar.webp&w=256&q=60 256w,
+                /_vercel/image?url=%2Fimages%2Favatar.webp&w=320&q=60 320w
+              "
             />
           </div>
           <div class="flex-1 flex flex-col items-start">
@@ -188,7 +193,10 @@ useHead({
     { rel: 'canonical', href: 'https://laraveljutsu.net/' },
     { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp', fetchpriority: 'high' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+    { rel: 'preload', as: 'image', href: '/_vercel/image?url=%2Fimages%2Favatar.webp&w=192&q=60', type: 'image/webp', fetchpriority: 'high' }
   ],
   script: [
     {
