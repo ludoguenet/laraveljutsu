@@ -25,7 +25,13 @@
         <div class="flex flex-col md:flex-row items-center space-y-16 md:space-y-0 md:gap-32">
           <div class="flex-shrink-0 relative">
             <div class="absolute -inset-4 sm:-inset-6 bg-lime-500/10 rounded-2xl -rotate-6 pointer-events-none z-0"/>
-            <img src="/img/avatar.webp" alt="Ludovic Guénet" class="relative rounded-2xl w-64 h-64 sm:w-80 sm:h-80 object-cover shadow-lg z-10">
+            <NuxtImg
+              src="/images/avatar.webp"
+              alt="Ludovic Guénet"
+              class="relative rounded-2xl w-64 h-64 sm:w-80 sm:h-80 object-cover shadow-lg z-10"
+              width="320"
+              height="320"
+            />
           </div>
           <div class="flex-1 flex flex-col items-start">
             <p class="mb-2 text-zinc-500">— Hello, I'm Ludovic 👋</p>
@@ -156,7 +162,7 @@ useHead({
     { property: 'og:url', content: 'https://laraveljutsu.net/' },
     { property: 'og:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { property: 'og:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { property: 'og:image', content: 'https://laraveljutsu.net/img/avatar.webp' },
+    { property: 'og:image', content: 'https://laraveljutsu.net/images/avatar.webp' },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: 'LaravelJutsu' },
     { property: 'og:see_also', content: 'https://youtube.com/@LaravelJutsu' },
@@ -165,7 +171,7 @@ useHead({
     { name: 'twitter:url', content: 'https://laraveljutsu.net/' },
     { name: 'twitter:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { name: 'twitter:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { name: 'twitter:image', content: 'https://laraveljutsu.net/img/avatar.webp' },
+    { name: 'twitter:image', content: 'https://laraveljutsu.net/images/avatar.webp' },
     { name: 'twitter:site', content: '@laraveljutsu' }
   ],
   link: [

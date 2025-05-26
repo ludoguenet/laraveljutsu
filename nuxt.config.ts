@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/content', '@nuxt/icon'],
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/content', '@nuxt/icon', '@nuxt/image'],
 
   app: {
     head: {
@@ -50,5 +50,10 @@ export default defineNuxtConfig({
           }
         }
       }
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp'],
   }
 })
