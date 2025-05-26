@@ -77,34 +77,5 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  experimental: {
-    payloadExtraction: true,
-    renderJsonPayloads: true,
-    treeshakeClientOnly: true,
-  },
-
-  vite: {
-    build: {
-      cssCodeSplit: true,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vendor': ['vue', 'vue-router'],
-            'ui': ['@nuxt/ui'],
-            'icons': ['@nuxt/icon']
-          }
-        }
-      },
-      chunkSizeWarningLimit: 1000,
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true
-        }
-      }
-    }
   }
 })
