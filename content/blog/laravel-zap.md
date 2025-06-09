@@ -1,8 +1,8 @@
 ---
-title: Laravel Zap: Lightning-Fast Schedule Management for Modern Laravel Applications
-description: Discover Laravel Zap, a powerful schedule management package that makes handling appointments, recurring events, and availability checking effortless in Laravel applications.
+title: "Laravel Zap: Lightning-Fast Schedule Management"
+description: "Discover Laravel Zap, a powerful schedule management package that makes handling appointments, recurring events, and availability checking effortless in Laravel applications."
 date: 2025-01-27
-author: Ludovic Guénet
+author: "Ludovic Guénet"
 ---
 
 Managing schedules, appointments, and time-based events in web applications can be surprisingly complex. Whether you're building a doctor's appointment system, managing meeting rooms, or handling employee shifts, you need a robust solution that integrates seamlessly with Laravel's ecosystem. Enter **Laravel Zap** – a powerful, flexible, and developer-friendly schedule management package that makes temporal operations feel effortless.
