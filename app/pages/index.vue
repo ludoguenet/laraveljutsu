@@ -26,7 +26,7 @@
           <div class="flex-shrink-0 relative">
             <div class="absolute -inset-4 sm:-inset-6 bg-lime-500/10 rounded-2xl -rotate-6 pointer-events-none z-0"/>
             <NuxtImg
-              src="/images/avatar.webp"
+              src="/images/avatar.png"
               alt="Ludovic Guénet"
               class="relative rounded-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover shadow-lg z-10"
               width="320"
@@ -42,9 +42,9 @@
               decoding="async"
               importance="high"
               srcset="
-                /_vercel/image?url=%2Fimages%2Favatar.webp&w=192&q=60 192w,
-                /_vercel/image?url=%2Fimages%2Favatar.webp&w=256&q=60 256w,
-                /_vercel/image?url=%2Fimages%2Favatar.webp&w=320&q=60 320w
+                /_vercel/image?url=%2Fimages%2Favatar.png&w=192&q=60 192w,
+                /_vercel/image?url=%2Fimages%2Favatar.png&w=256&q=60 256w,
+                /_vercel/image?url=%2Fimages%2Favatar.png&w=320&q=60 320w
               "
             />
           </div>
@@ -177,7 +177,7 @@ useHead({
     { property: 'og:url', content: 'https://laraveljutsu.net/' },
     { property: 'og:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { property: 'og:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { property: 'og:image', content: 'https://laraveljutsu.net/images/avatar.webp' },
+    { property: 'og:image', content: 'https://laraveljutsu.net/images/avatar.png' },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: 'LaravelJutsu' },
     { property: 'og:see_also', content: 'https://youtube.com/@LaravelJutsu' },
@@ -186,17 +186,17 @@ useHead({
     { name: 'twitter:url', content: 'https://laraveljutsu.net/' },
     { name: 'twitter:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { name: 'twitter:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { name: 'twitter:image', content: 'https://laraveljutsu.net/images/avatar.webp' },
+    { name: 'twitter:image', content: 'https://laraveljutsu.net/images/avatar.png' },
     { name: 'twitter:site', content: '@laraveljutsu' }
   ],
   link: [
     { rel: 'canonical', href: 'https://laraveljutsu.net/' },
-    { rel: 'preload', as: 'image', href: '/images/avatar.webp', type: 'image/webp', fetchpriority: 'high' },
+    { rel: 'preload', as: 'image', href: '/images/avatar.png', type: 'image/webp', fetchpriority: 'high' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preload', as: 'image', href: '/_vercel/image?url=%2Fimages%2Favatar.webp&w=192&q=60', type: 'image/webp', fetchpriority: 'high' }
+    { rel: 'preload', as: 'image', href: '/_vercel/image?url=%2Fimages%2Favatar.png&w=192&q=60', type: 'image/webp', fetchpriority: 'high' }
   ],
   script: [
     {
