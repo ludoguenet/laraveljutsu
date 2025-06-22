@@ -28,7 +28,7 @@
             <NuxtImg
               src="/images/avatar.png"
               alt="Ludovic Guénet"
-              class="relative rounded-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover shadow-lg z-10"
+              class="relative rounded-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover object-top shadow-lg z-10"
               width="320"
               height="320"
               loading="eager"
