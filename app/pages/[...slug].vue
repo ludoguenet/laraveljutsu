@@ -4,10 +4,7 @@
       <div class="max-w-3xl mx-auto px-4">
         <!-- Back Button -->
         <div class="mb-8 sm:mb-12">
-          <NuxtLink to="/" class="inline-flex items-center gap-2 glass-effect px-3 py-2 sm:px-4 sm:py-2 rounded-full text-slate-700 hover:text-purple-600 hover:scale-105 transition-all">
-            <UIcon name="i-mdi-arrow-left" class="text-base sm:text-lg" />
-            <span class="font-medium text-sm sm:text-base">Back to Home</span>
-          </NuxtLink>
+          <BackToHomeButton />
         </div>
 
         <div v-if="pending" class="text-center py-12">
