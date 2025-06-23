@@ -1,5 +1,5 @@
 <template>
-  <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 mb-6">
+  <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
     <slot />
   </ul>
 </template>

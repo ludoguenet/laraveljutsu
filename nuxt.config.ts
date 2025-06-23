@@ -13,6 +13,15 @@ export default defineNuxtConfig({
     head: {
       link: [
         {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com'
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: ''
+        },
+        {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap'
         }
@@ -36,8 +45,7 @@ export default defineNuxtConfig({
         markdown: {
           highlight: {
             theme: {
-              default: 'github-light',
-              dark: 'github-dark',
+              default: 'material-theme-palenight',
             },
             langs: [
                 'php',
@@ -57,7 +65,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    quality: 75,
+    quality: 85,
     format: ['webp'],
     screens: {
       xs: 320,
@@ -71,9 +79,9 @@ export default defineNuxtConfig({
       avatar: {
         modifiers: {
           format: 'webp',
-          width: 320,
-          height: 320,
-          quality: 75
+          width: 384,
+          height: 384,
+          quality: 85
         }
       }
     }
