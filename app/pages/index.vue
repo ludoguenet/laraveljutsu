@@ -4,22 +4,22 @@
     <div class="py-16 md:py-24">
       <div class="max-w-6xl mx-auto px-6">
         <!-- Icons and Email Row -->
-        <div class="flex justify-between items-center mb-16 fade-in-up">
-          <div class="flex items-center gap-6 stagger-children">
-            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-github" class="text-xl" />
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0 mb-16 fade-in-up">
+          <div class="flex items-center gap-3 sm:gap-6 stagger-children justify-center sm:justify-start">
+            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
+              <UIcon name="i-mdi-github" class="text-lg sm:text-xl" />
             </a>
-            <a href="https://linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-linkedin" class="text-xl" />
+            <a href="https://linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
+              <UIcon name="i-mdi-linkedin" class="text-lg sm:text-xl" />
             </a>
-            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-twitter" class="text-xl" />
+            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
+              <UIcon name="i-mdi-twitter" class="text-lg sm:text-xl" />
             </a>
-            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-handshake" class="text-xl" />
+            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
+              <UIcon name="i-mdi-handshake" class="text-lg sm:text-xl" />
             </a>
           </div>
-          <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-sm font-medium text-slate-700 hover:text-purple-600 opacity-80 hover:opacity-100">ludo@epekta.com</a>
+          <a href="mailto:ludo@epekta.com" aria-label="Send email to ludo@epekta.com" class="text-xs sm:text-sm font-medium text-slate-700 hover:text-purple-600 opacity-80 hover:opacity-100 text-center sm:text-right">ludo@epekta.com</a>
         </div>
         <!-- Image and Text Row -->
         <div class="flex flex-col lg:flex-row items-center gap-20 lg:gap-32">
