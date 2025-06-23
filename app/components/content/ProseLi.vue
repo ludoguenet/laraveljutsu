@@ -1,5 +1,5 @@
 <template>
-  <li class="text-zinc-600 dark:text-zinc-300">
+  <li class="text-slate-600 dark:text-slate-300">
     <slot />
   </li>
 </template>

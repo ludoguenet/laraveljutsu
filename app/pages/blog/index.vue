@@ -1,31 +1,32 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-[#f8f8f3] text-zinc-900 transition-colors duration-300">
-    <div class="py-12 md:py-20">
-      <div class="max-w-5xl mx-auto px-4">
+  <div class="min-h-screen flex flex-col bg-gradient-to-br from-[#fef3e2] via-[#fff8f0] to-[#fef3e2] text-slate-900">
+    <div class="py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-6">
         <!-- Back Button -->
-        <div class="mb-8">
-          <NuxtLink to="/" class="inline-flex items-center gap-2 text-zinc-600 hover:text-lime-500 transition-colors">
+        <div class="mb-16 fade-in-up">
+          <NuxtLink to="/" class="inline-flex items-center gap-2 glass-effect px-4 py-2 rounded-full text-slate-700 hover:text-purple-600 hover:scale-105 transition-all">
             <UIcon name="i-mdi-arrow-left" class="text-lg" />
-            <span>Back to Home</span>
+            <span class="font-medium">Back to Home</span>
           </NuxtLink>
         </div>
 
         <!-- Blog Header -->
-        <div class="flex flex-col md:flex-row items-start gap-6 mb-6">
-          <div class="flex-1 flex flex-col items-start mb-8 md:mb-0">
-            <h1 class="text-2xl md:text-3xl font-black text-zinc-900 mb-4 flex items-end gap-2 uppercase tracking-wider leading-tight">
-              <span class="font-black">ALL</span>
-              <span class="italic font-black text-lime-500">ARTICLES</span>
+        <div class="mb-16 fade-in-up" style="animation-delay: 0.1s;">
+          <div class="space-y-4">
+            <h1 class="text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+              <span class="block">ALL</span>
+              <span class="block gradient-text">ARTICLES</span>
             </h1>
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-orange-500 rounded-full"></div>
           </div>
         </div>
 
         <!-- Articles List -->
         <div v-if="pending" class="text-center py-12">
-          <p class="text-zinc-600">Loading...</p>
+          <p class="text-slate-600">Loading...</p>
         </div>
         <div v-else-if="error" class="text-center py-12">
-          <p class="text-zinc-600">An error occurred.</p>
+          <p class="text-slate-600">An error occurred.</p>
         </div>
         <div v-else-if="posts && posts.length > 0" class="grid gap-6">
           <NuxtLink

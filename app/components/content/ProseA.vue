@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="text-lime-600 dark:text-lime-400">
+  <a :href="href" class="text-purple-600 dark:text-purple-400">
     <slot />
   </a>
 </template>
