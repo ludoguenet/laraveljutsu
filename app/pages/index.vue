@@ -21,15 +21,15 @@
     <section class="pt-24 sm:pt-32 pb-24 sm:pb-40 px-4 sm:px-6 relative overflow-hidden">
       <!-- Background decorative elements -->
       <div class="absolute inset-0 -z-10">
-        <div class="absolute top-20 left-10 w-64 h-64 bg-lime-500/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-900/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-lime-500/5 rounded-full blur-3xl"/>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-900/5 rounded-full blur-3xl"/>
       </div>
 
       <div class="max-w-7xl mx-auto">
         <div class="text-center">
           <div class="fade-in-up">
             <p class="text-slate-500 uppercase tracking-wide text-xs sm:text-sm font-medium mb-6 sm:mb-8">— Hello, I'm Ludovic</p>
-            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12"><span class="block">THE</span><span class="block text-lime-500">LEGENDARY</span><span class="block">SAMURAÏ</span></h1>
 
                         <!-- Tech Stack Visual -->
             <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mb-8 md:mb-12 fade-in-up" style="animation-delay: 0.1s;">
@@ -97,19 +97,19 @@
             <div class="grid grid-cols-2 gap-6">
               <div class="bg-white p-6 rounded-2xl">
                 <h3 class="font-bold text-slate-900 mb-2">Backend</h3>
-                <p class="text-slate-600 text-sm">PHP, Laravel, APIs</p>
+                <p class="text-slate-600 text-sm">PHP, Laravel, RESTful API</p>
               </div>
               <div class="bg-white p-6 rounded-2xl">
                 <h3 class="font-bold text-slate-900 mb-2">Frontend</h3>
-                <p class="text-slate-600 text-sm">Vue.js, Nuxt.js, React</p>
+                <p class="text-slate-600 text-sm">Vue.js, Nuxt.js, Tailwind CSS</p>
               </div>
               <div class="bg-white p-6 rounded-2xl">
                 <h3 class="font-bold text-slate-900 mb-2">DevOps</h3>
-                <p class="text-slate-600 text-sm">Docker, CI/CD, Cloud</p>
+                <p class="text-slate-600 text-sm">CI/CD, Git</p>
               </div>
               <div class="bg-white p-6 rounded-2xl">
                 <h3 class="font-bold text-slate-900 mb-2">Database</h3>
-                <p class="text-slate-600 text-sm">MySQL, PostgreSQL, Redis</p>
+                <p class="text-slate-600 text-sm">MySQL, MariaDB, Sqlite, Redis</p>
               </div>
             </div>
           </div>

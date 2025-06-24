@@ -46,10 +46,10 @@
             </h1>
             <div class="flex items-center gap-6 text-slate-500 mb-8">
               <span class="text-sm">{{ new Date(page.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
-              <span class="w-1 h-1 bg-slate-400 rounded-full"></span>
+              <span class="w-1 h-1 bg-slate-400 rounded-full"/>
               <span class="text-sm">{{ page.author }}</span>
             </div>
-            <div class="w-16 h-1 bg-lime-500 rounded-full"></div>
+            <div class="w-16 h-1 bg-lime-500 rounded-full"/>
           </header>
 
           <!-- Article Content -->
