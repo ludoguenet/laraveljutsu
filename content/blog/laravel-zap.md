@@ -1,7 +1,7 @@
 ---
 title: "Laravel Zap: Lightning-Fast Schedule Management"
 description: "Discover Laravel Zap, a powerful schedule management package that makes handling appointments, recurring events, and availability checking effortless in Laravel applications."
-date: 2025-01-27
+date: "2025-06-20"
 author: "Ludovic Guénet"
 ---
 

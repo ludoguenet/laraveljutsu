@@ -1,7 +1,7 @@
 ---
 title: "Writing Effective Cursor Rules for Laravel/PHP Projects"
 description: "Learn how to create effective Cursor Rules for Laravel/PHP projects that improve code quality, enforce architectural patterns, and enhance developer productivity."
-date: "2024-03-27"
+date: "2025-05-01"
 author: "Ludovic Guénet"
 ---
 
