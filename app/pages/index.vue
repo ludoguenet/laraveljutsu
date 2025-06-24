@@ -18,43 +18,52 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
+    <section class="pt-32 pb-40 px-6 relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-lime-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-900/5 rounded-full blur-3xl"></div>
+      </div>
+
       <div class="max-w-7xl mx-auto">
-        <div class="max-w-4xl">
-          <div class="mb-8 fade-in-up">
-            <p class="text-slate-500 uppercase tracking-wide text-sm font-medium mb-6">— Hello, I'm Ludovic</p>
-            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] tracking-tight mb-8">
+        <div class="text-center">
+          <div class="fade-in-up">
+            <p class="text-slate-500 uppercase tracking-wide text-sm font-medium mb-8">— Hello, I'm Ludovic</p>
+            <h1 class="text-7xl md:text-9xl lg:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
               <span class="block">THE</span>
               <span class="block text-lime-500">LEGENDARY</span>
               <span class="block">SAMURAÏ</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light mb-12">
+
+            <!-- Tech Stack Visual -->
+            <div class="flex flex-wrap justify-center items-center gap-4 mb-12 fade-in-up" style="animation-delay: 0.1s;">
+              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold">PHP</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold">Laravel</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold">Vue.js</span>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold">Nuxt.js</span>
+              </div>
+            </div>
+
+            <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light mb-12 fade-in-up" style="animation-delay: 0.2s;">
               Available for freelance web development missions.<br>
               <span class="text-slate-900 font-medium">For a modern, efficient, and elegant application.</span>
             </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-lime-500 transition-all duration-300 font-medium">
+
+            <div class="flex flex-wrap justify-center gap-4 fade-in-up" style="animation-delay: 0.3s;">
+              <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-12 py-4 rounded-full hover:bg-lime-500 transition-all duration-300 font-medium text-lg">
                 Let's talk
               </a>
-              <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="border border-slate-200 text-slate-700 px-8 py-4 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 font-medium">
+              <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="border border-slate-200 text-slate-700 px-12 py-4 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 font-medium text-lg">
                 Hire me
               </a>
             </div>
-          </div>
-        </div>
-
-        <!-- Profile Image -->
-        <div class="mt-20 fade-in-up" style="animation-delay: 0.2s;">
-          <div class="relative inline-block">
-            <NuxtImg
-              src="/images/avatar.png"
-              alt="Ludovic Guénet"
-              class="w-80 md:w-96 rounded-2xl shadow-2xl"
-              width="384"
-              height="384"
-              loading="eager"
-              format="webp"
-            />
           </div>
         </div>
       </div>
@@ -237,26 +246,22 @@ useHead({
     { property: 'og:url', content: 'https://laraveljutsu.net/' },
     { property: 'og:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { property: 'og:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { property: 'og:image', content: 'https://laraveljutsu.net/images/avatar.png' },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:site_name', content: 'LaravelJutsu' },
     { property: 'og:see_also', content: 'https://youtube.com/@LaravelJutsu' },
     // Twitter
-    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:url', content: 'https://laraveljutsu.net/' },
     { name: 'twitter:title', content: 'Ludovic Guénet - Web Developer Laravel & Vue.js | YouTube & Freelance Missions' },
     { name: 'twitter:description', content: 'Freelance web developer, expert in PHP, Laravel, Vue.js, Nuxt.js. Discover my YouTube channel LaravelJutsu and contact me for freelance missions.' },
-    { name: 'twitter:image', content: 'https://laraveljutsu.net/images/avatar.png' },
     { name: 'twitter:site', content: '@laraveljutsu' }
   ],
   link: [
     { rel: 'canonical', href: 'https://laraveljutsu.net/' },
-    { rel: 'preload', as: 'image', href: '/images/avatar.png', type: 'image/webp', fetchpriority: 'high' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preload', as: 'image', href: '/_vercel/image?url=%2Fimages%2Favatar.png&w=192&q=60', type: 'image/webp', fetchpriority: 'high' }
+    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }
   ],
   script: [
     {
