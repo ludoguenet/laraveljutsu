@@ -1,3 +1,3 @@
 <template>
-<pre class="bg-gray-700 rounded-lg overflow-x-auto whitespace-pre p-4 font-mono text-sm border border-gray-200 mb-6"><slot /></pre>
+  <pre class="bg-slate-900 text-slate-100 rounded-2xl overflow-x-auto whitespace-pre p-6 font-mono text-sm border border-slate-200 mb-8 shadow-sm"><slot /></pre>
 </template>

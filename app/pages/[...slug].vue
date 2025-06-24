@@ -1,43 +1,85 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-[#fef3e2] text-slate-900 transition-colors duration-300">
-    <div class="py-12 md:py-20">
-      <div class="max-w-3xl mx-auto px-4">
+  <div class="min-h-screen bg-white text-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <NuxtLink to="/" class="text-xl font-bold">
+            Laravel<span class="text-lime-500">Jutsu</span>
+          </NuxtLink>
+          <div class="flex items-center gap-8">
+            <NuxtLink to="/blog" class="text-slate-600 hover:text-slate-900 transition-colors">Blog</NuxtLink>
+            <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-lime-500 transition-all duration-300">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="pt-32 pb-20 px-6">
+      <div class="max-w-4xl mx-auto">
         <!-- Back Button -->
-        <div class="mb-8 sm:mb-12">
-          <NuxtLink to="/" class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md shadow-lg shadow-purple-500/10 border border-white/40 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-slate-700 hover:text-purple-600 hover:bg-white/90 hover:border-purple-300/40 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-500">
-            <UIcon name="i-mdi-arrow-left" class="text-base sm:text-lg" />
-            <span class="font-medium text-sm sm:text-base">Back to Home</span>
+        <div class="mb-12">
+          <NuxtLink to="/blog" class="inline-flex items-center text-slate-500 hover:text-slate-700 transition-colors text-sm">
+            <UIcon name="i-mdi-arrow-left" class="mr-2" />
+            Back to articles
           </NuxtLink>
         </div>
 
-        <div v-if="pending" class="text-center py-12">
-          <p class="text-slate-600">Loading...</p>
+        <div v-if="pending" class="flex items-center justify-center py-20">
+          <div class="w-8 h-8 border-2 border-lime-500 border-t-transparent rounded-full animate-spin"/>
         </div>
-        <div v-else-if="error" class="text-center py-12">
-          <p class="text-slate-600">An error occurred.</p>
-        </div>
-        <div v-else-if="page" class="prose">
-          <h1 class="text-4xl sm:text-5xl font-black mb-6 leading-tight">
-            {{ page.title }}
-          </h1>
-          <div class="flex items-center gap-4 text-sm text-slate-500 mb-12">
-            <span>{{ new Date(page.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
-            <span>•</span>
-            <span>{{ page.author }}</span>
-          </div>
-          <ContentRenderer :value="page" />
-        </div>
-        <div v-else class="text-center py-12">
-          <h1 class="text-4xl sm:text-5xl font-black mb-6 leading-tight">
-            <span class="text-slate-900">404</span>
-          </h1>
-          <p class="text-slate-600 mb-8">Page not found</p>
-          <NuxtLink to="/" class="bg-purple-600 hover:bg-orange-500 text-white hover:text-slate-900 font-medium px-6 py-2.5 min-w-[140px] text-center rounded-full transition-colors text-sm shadow focus:outline-none focus:ring-2 focus:ring-purple-600">
-            Back to Home
+        <div v-else-if="error" class="text-center py-20">
+          <h1 class="text-4xl font-black mb-6">404</h1>
+          <p class="text-slate-600 mb-8">Article not found</p>
+          <NuxtLink to="/blog" class="bg-slate-900 text-white px-8 py-3 rounded-full hover:bg-lime-500 transition-all duration-300">
+            Back to articles
           </NuxtLink>
         </div>
+        <div v-else-if="page">
+          <!-- Article Header -->
+          <header class="mb-16 fade-in-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight">
+              {{ page.title }}
+            </h1>
+            <div class="flex items-center gap-6 text-slate-500 mb-8">
+              <span class="text-sm">{{ new Date(page.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
+              <span class="w-1 h-1 bg-slate-400 rounded-full"></span>
+              <span class="text-sm">{{ page.author }}</span>
+            </div>
+            <div class="w-16 h-1 bg-lime-500 rounded-full"></div>
+          </header>
+
+          <!-- Article Content -->
+          <div class="prose prose-lg prose-slate max-w-none fade-in-up" style="animation-delay: 0.1s;">
+            <ContentRenderer :value="page" />
+          </div>
+
+          <!-- Article Footer -->
+          <footer class="mt-20 pt-12 border-t border-slate-200 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Enjoyed this article?</h3>
+                <p class="text-slate-600">Connect with me for more insights on Laravel and web development.</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="text-slate-400 hover:text-lime-500 transition-colors" aria-label="LinkedIn">
+                  <UIcon name="i-mdi-linkedin" class="text-xl" />
+                </a>
+                <a href="https://x.com/laraveljutsu" target="_blank" class="text-slate-400 hover:text-lime-500 transition-colors" aria-label="Twitter">
+                  <UIcon name="i-mdi-twitter" class="text-xl" />
+                </a>
+                <a href="https://youtube.com/@LaravelJutsu" target="_blank" class="text-slate-400 hover:text-lime-500 transition-colors" aria-label="YouTube">
+                  <UIcon name="i-mdi-youtube" class="text-xl" />
+                </a>
+              </div>
+            </div>
+          </footer>
+        </div>
       </div>
-    </div>
+    </article>
   </div>
 </template>
 

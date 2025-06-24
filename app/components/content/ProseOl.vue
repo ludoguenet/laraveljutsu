@@ -1,5 +1,5 @@
 <template>
-  <ol class="list-decimal list-inside text-zinc-600 dark:text-zinc-300 mb-6">
+  <ol class="list-decimal list-inside space-y-2 mb-6 text-lg text-slate-700 leading-relaxed">
     <slot />
   </ol>
 </template>
