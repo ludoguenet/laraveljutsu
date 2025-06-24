@@ -3,71 +3,86 @@
 
 @theme {
     --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-    /* Custom color palette matching avatar */
-    --color-primary: #8b5cf6; /* Purple from hoodie */
-    --color-secondary: #f97316; /* Orange from background */
-    --color-accent: #fbbf24; /* Yellow from sunburst */
-    --color-dark: #1e293b; /* Navy blue */
-    --color-bg: #fef3e2; /* Warm cream background */
 }
 
-/* Critical CSS - Load First */
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+    font-feature-settings: "kern" 1, "liga" 1, "frac" 1, "num" 1;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: -0.025em;
+}
+
+/* Animations */
 .fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.modern-btn {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-effect {
-    backdrop-filter: blur(12px) saturate(150%);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #8b5cf6, #f97316, #fbbf24);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 3s ease infinite;
-}
-
-/* Essential animations only */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+/* Navigation backdrop blur */
+nav {
+    backdrop-filter: blur(20px) saturate(180%);
 }
 
-/* Smooth transitions for interactive elements only */
-a, button, .hover-lift {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+/* Button styles */
+.btn-primary {
+    background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reduced motion for better performance */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(132, 204, 22, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth link transitions */
+a {
+    transition: color 0.25s ease;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #84cc16;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-    .fade-in-up,
-    .gradient-text,
-    .float-animation {
+    .fade-in-up {
         animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     * {
@@ -77,60 +92,43 @@ a, button, .hover-lift {
     }
 }
 
-/* Optimized hover effects */
-.hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.modern-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Non-critical animations - loaded after critical content */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-}
-
-.float-animation {
-    animation: float 4s ease-in-out infinite;
-    will-change: transform;
-}
-
-.stagger-children > * {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeInUp 0.5s ease-out forwards;
-}
-
-.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-children > *:nth-child(2) { animation-delay: 0.15s; }
-.stagger-children > *:nth-child(3) { animation-delay: 0.2s; }
-.stagger-children > *:nth-child(4) { animation-delay: 0.25s; }
-.stagger-children > *:nth-child(5) { animation-delay: 0.3s; }
-
-/* Enhanced performance CSS */
+/* Performance optimizations */
 .parallax-element {
     transform: translateZ(0);
     will-change: transform;
 }
 
-/* Focus styles for accessibility */
-.modern-focus:focus-visible {
-    outline: 2px solid #8b5cf6;
-    outline-offset: 2px;
-    border-radius: 8px;
-}
-
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Content visibility optimization */
+/* Content loading optimization */
 .content-section {
     content-visibility: auto;
-    contain-intrinsic-size: 300px;
+    contain-intrinsic-size: 400px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Selection color */
+::selection {
+    background: #84cc16;
+    color: white;
+}
+
+::-moz-selection {
+    background: #84cc16;
+    color: white;
 }

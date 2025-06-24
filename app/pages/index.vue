@@ -1,197 +1,209 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-[#fef3e2] via-[#fff8f0] to-[#fef3e2] text-slate-900">
-    <!-- Hero Section -->
-    <div class="py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <!-- Icons and Email Row -->
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0 mb-16 fade-in-up">
-          <div class="flex items-center gap-3 sm:gap-6 stagger-children justify-center sm:justify-start">
-            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-github" class="text-lg sm:text-xl" />
-            </a>
-            <a href="https://linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-linkedin" class="text-lg sm:text-xl" />
-            </a>
-            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-twitter" class="text-lg sm:text-xl" />
-            </a>
-            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full glass-effect hover-lift text-slate-600 hover:text-purple-600 hover:scale-110">
-              <UIcon name="i-mdi-handshake" class="text-lg sm:text-xl" />
+  <div class="min-h-screen bg-white text-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-xl font-bold">
+            Laravel<span class="text-lime-500">Jutsu</span>
+          </div>
+          <div class="flex items-center gap-8">
+            <NuxtLink to="/blog" class="text-slate-600 hover:text-slate-900 transition-colors">Blog</NuxtLink>
+            <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-lime-500 transition-all duration-300">
+              Contact
             </a>
           </div>
-          <a href="mailto:ludo@epekta.com" aria-label="Contact me for freelance missions" class="modern-btn bg-gradient-to-r from-amber-500 to-orange-500 hover:from-purple-600 hover:to-purple-700 text-white font-medium px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm shadow-lg shadow-amber-500/25 hover:shadow-purple-500/25 hover:shadow-xl hover:scale-105 flex items-center gap-2 justify-center sm:justify-end">
-            <UIcon name="i-mdi-email-outline" class="text-sm sm:text-base" />
-            <span class="font-semibold">HIRE ME</span>
-          </a>
         </div>
-        <!-- Image and Text Row -->
-        <div class="flex flex-col lg:flex-row items-center gap-20 lg:gap-32">
-          <div class="relative fade-in-up" style="animation-delay: 0.2s;">
-            <div class="absolute -inset-8 bg-gradient-to-r from-purple-500/20 via-orange-500/20 to-amber-500/20 rounded-3xl blur-2xl opacity-60 float-animation"/>
-                        <div class="relative">
-              <NuxtImg
-                src="/images/avatar.png"
-                alt="Ludovic Guénet"
-                class="relative rounded-3xl w-64 sm:w-80 lg:w-96 object-contain shadow-2xl shadow-purple-500/20 hover-lift"
-                width="384"
-                height="384"
-                loading="eager"
-                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
-                quality="85"
-                placeholder="blur"
-                format="webp"
-                densities="1x 2x"
-                preload
-                fetchpriority="high"
-                decoding="async"
-              />
-            </div>
-          </div>
-          <div class="flex-1 space-y-8 fade-in-up" style="animation-delay: 0.4s;">
-            <div class="space-y-6">
-              <p class="text-slate-600/80 font-medium tracking-wide">— Hello, I'm Ludovic 👋</p>
-              <h1 class="text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.9] tracking-tight">
-                <span class="block">THE <span class="gradient-text">*</span></span>
-                <span class="block mt-2">
-                  <span class="text-slate-900">LEGENDARY</span><br>
-                  <span class="gradient-text">SAMURAÏ</span>
-                </span>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-4xl">
+          <div class="mb-8 fade-in-up">
+            <p class="text-slate-500 uppercase tracking-wide text-sm font-medium mb-6">— Hello, I'm Ludovic</p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] tracking-tight mb-8">
+              <span class="block">THE</span>
+              <span class="block text-lime-500">LEGENDARY</span>
+              <span class="block">SAMURAÏ</span>
             </h1>
-              <p class="text-xl text-slate-600 max-w-2xl leading-relaxed font-light">
-                Available for freelance web development missions.<br>
-                <span class="text-slate-800 font-medium">For a modern, efficient, and elegant application.</span>
-              </p>
-            </div>
-            <div class="pt-4">
-              <a href="https://linkedin.com/in/ludoguenet" target="_blank" rel="noopener noreferrer" class="modern-btn bg-gradient-to-r from-purple-600 to-purple-700 hover:from-orange-500 hover:to-orange-600 text-white font-medium px-8 py-4 inline-flex items-center gap-2 text-base shadow-lg shadow-purple-500/25 hover:shadow-orange-500/25 hover:shadow-xl hover:scale-105">
-                <span>LET'S TALK</span>
-                <UIcon name="i-mdi-arrow-right" class="text-lg" />
+            <p class="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light mb-12">
+              Available for freelance web development missions.<br>
+              <span class="text-slate-900 font-medium">For a modern, efficient, and elegant application.</span>
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-8 py-4 rounded-full hover:bg-lime-500 transition-all duration-300 font-medium">
+                Let's talk
+              </a>
+              <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="border border-slate-200 text-slate-700 px-8 py-4 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 font-medium">
+                Hire me
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- About Section -->
-    <section class="relative py-24 mt-32 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-slate-800"/>
-      <div class="absolute inset-0 opacity-40" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"/>
-      <div class="relative max-w-6xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="space-y-8 fade-in-up">
-            <div class="space-y-4">
-              <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight">
-                <span class="block opacity-80">ABOUT</span>
-                <span class="block gradient-text">ME</span>
-          </h2>
-              <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"/>
-            </div>
-            <a href="https://youtube.com/@LaravelJutsu" target="_blank" rel="noopener noreferrer" class="modern-btn bg-gradient-to-r from-orange-500 to-amber-500 hover:from-white hover:to-white text-white hover:text-slate-900 font-medium px-8 py-4 inline-flex items-center gap-2 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:scale-105">
-              <span>LEARN MORE</span>
-              <UIcon name="i-mdi-arrow-right" class="text-lg" />
-            </a>
-        </div>
-          <div class="space-y-6 fade-in-up" style="animation-delay: 0.2s;">
-            <p class="text-2xl lg:text-3xl text-white font-light leading-relaxed">
-              I use <span class="font-medium text-orange-400 hover:text-orange-300 transition-colors cursor-default">PHP</span>, <span class="font-medium text-orange-400 hover:text-orange-300 transition-colors cursor-default">Laravel</span>, <span class="font-medium text-orange-400 hover:text-orange-300 transition-colors cursor-default">Vue.js</span> and <span class="font-medium text-orange-400 hover:text-orange-300 transition-colors cursor-default">Nuxt.js</span> daily.
-            </p>
-            <p class="text-lg text-white/80 leading-relaxed">
-          I love creating modern, performant, and elegant web applications. With solid technical expertise and attention to detail, I develop robust and maintainable solutions.
-            </p>
+        <!-- Profile Image -->
+        <div class="mt-20 fade-in-up" style="animation-delay: 0.2s;">
+          <div class="relative inline-block">
+            <NuxtImg
+              src="/images/avatar.png"
+              alt="Ludovic Guénet"
+              class="w-80 md:w-96 rounded-2xl shadow-2xl"
+              width="384"
+              height="384"
+              loading="eager"
+              format="webp"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="py-24 bg-gradient-to-br from-[#fef3e2] via-[#fff8f0] to-[#fef3e2]">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
-          <div class="space-y-8 fade-in-up">
-            <div class="space-y-4">
-              <h2 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
-                <span class="block">LATEST</span>
-                <span class="block gradient-text">ARTICLE</span>
+    <!-- About Section -->
+    <section class="py-32 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+          <div class="fade-in-up">
+            <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">
+              About<br>
+              <span class="text-lime-500">me</span>
             </h2>
-              <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-orange-500 rounded-full"/>
+            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+              <p>
+                I use <strong class="text-slate-900">PHP</strong>, <strong class="text-slate-900">Laravel</strong>,
+                <strong class="text-slate-900">Vue.js</strong> and <strong class="text-slate-900">Nuxt.js</strong> daily.
+              </p>
+              <p>
+                I love creating modern, performant, and elegant web applications. With solid technical expertise
+                and attention to detail, I develop robust and maintainable solutions.
+              </p>
             </div>
-            <NuxtLink to="/blog" class="modern-btn bg-gradient-to-r from-purple-600 to-purple-700 hover:from-orange-500 hover:to-orange-600 text-white font-medium px-8 py-4 inline-flex items-center gap-2 shadow-lg shadow-purple-500/25 hover:shadow-orange-500/25 hover:shadow-xl hover:scale-105">
-              <span>ALL ARTICLES</span>
-              <UIcon name="i-mdi-arrow-right" class="text-lg" />
+            <div class="mt-8">
+              <a href="https://youtube.com/@LaravelJutsu" target="_blank" class="inline-flex items-center text-lime-500 font-medium hover:text-lime-600 transition-colors">
+                Learn more about my work
+                <UIcon name="i-mdi-arrow-right" class="ml-2" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="fade-in-up" style="animation-delay: 0.2s;">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white p-6 rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-2">Backend</h3>
+                <p class="text-slate-600 text-sm">PHP, Laravel, APIs</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-2">Frontend</h3>
+                <p class="text-slate-600 text-sm">Vue.js, Nuxt.js, React</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-2">DevOps</h3>
+                <p class="text-slate-600 text-sm">Docker, CI/CD, Cloud</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-2">Database</h3>
+                <p class="text-slate-600 text-sm">MySQL, PostgreSQL, Redis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Article Section -->
+    <section class="py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+          <div class="fade-in-up">
+            <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">
+              Latest<br>
+              <span class="text-lime-500">article</span>
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+              Discover my latest thoughts on web development, Laravel best practices,
+              and modern development techniques.
+            </p>
+            <NuxtLink to="/blog" class="inline-flex items-center text-lime-500 font-medium hover:text-lime-600 transition-colors">
+              View all articles
+              <UIcon name="i-mdi-arrow-right" class="ml-2" />
             </NuxtLink>
           </div>
+
           <div class="fade-in-up" style="animation-delay: 0.2s;">
             <div v-if="pending" class="flex items-center justify-center py-16">
-              <div class="w-8 h-8 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"/>
+              <div class="w-8 h-8 border-2 border-lime-500 border-t-transparent rounded-full animate-spin"/>
             </div>
-            <div v-else-if="error" class="text-center py-16">
-              <p class="text-slate-600">An error occurred while loading articles.</p>
+            <div v-else-if="error" class="text-slate-600">
+              <p>An error occurred while loading articles.</p>
             </div>
             <div v-else-if="latestPost" class="group">
-              <NuxtLink
-                :to="latestPost.path"
-                class="block bg-white/70 backdrop-blur-md hover-lift p-8 rounded-3xl border border-white/40 shadow-lg shadow-purple-500/10 hover:bg-white/90 hover:border-purple-300/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-500"
-              >
-                <div class="space-y-4">
-                  <h3 class="text-2xl lg:text-3xl font-bold text-slate-900 leading-tight group-hover:text-purple-600 transition-colors">
+              <NuxtLink :to="latestPost.path" class="block bg-white border border-slate-200 hover:border-slate-300 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-lime-500 transition-colors">
                   {{ latestPost.title }}
-                  </h3>
-                  <p class="text-lg text-slate-600 leading-relaxed">
+                </h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
                   {{ latestPost.description }}
                 </p>
-                  <div class="flex items-center gap-6 text-sm text-slate-500">
-                  <span>{{ new Date(latestPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</span>
-                    <span class="w-1 h-1 bg-slate-400 rounded-full"/>
-                  <span>{{ latestPost.author }}</span>
+                <div class="flex items-center justify-between">
+                  <div class="text-sm text-slate-500">
+                    {{ new Date(latestPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
                   </div>
-                  <div class="pt-2">
-                    <span class="inline-flex items-center text-purple-600 font-medium">
-                      Read article
-                      <UIcon name="i-mdi-arrow-right" class="ml-2 text-lg group-hover:translate-x-1 transition-transform" />
-                    </span>
+                  <div class="flex items-center text-lime-500 font-medium text-sm group-hover:translate-x-1 transition-transform">
+                    Read article
+                    <UIcon name="i-mdi-arrow-right" class="ml-2" />
                   </div>
                 </div>
               </NuxtLink>
             </div>
-            <div v-else class="text-center py-16">
-              <p class="text-slate-600">No articles yet.</p>
+            <div v-else class="text-slate-600">
+              <p>No articles yet.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-32 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight fade-in-up">
+            Ready to start<br>
+            <span class="text-lime-400">your project?</span>
+          </h2>
+          <p class="text-xl text-slate-300 mb-12 leading-relaxed fade-in-up" style="animation-delay: 0.1s;">
+            Let's discuss your next web development mission and bring your ideas to life.
+          </p>
+          <div class="fade-in-up" style="animation-delay: 0.2s;">
+            <a href="mailto:ludo@epekta.com" class="bg-lime-500 text-white px-12 py-4 rounded-full hover:bg-lime-600 transition-all duration-300 font-medium text-lg inline-flex items-center gap-3">
+              <UIcon name="i-mdi-email-outline" class="text-xl" />
+              ludo@epekta.com
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="mt-32 py-16 bg-gradient-to-br from-slate-50 to-white border-t border-slate-100">
-      <div class="max-w-6xl mx-auto px-6">
-        <!-- Contact CTA Section -->
-        <div class="text-center mb-12 fade-in-up">
-          <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Ready to start your project?</h3>
-          <p class="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">Let's discuss your next web development mission and bring your ideas to life.</p>
-          <a href="mailto:ludo@epekta.com" aria-label="Contact me for freelance missions" class="modern-btn bg-gradient-to-r from-purple-600 to-purple-700 hover:from-amber-500 hover:to-orange-500 text-white font-semibold px-8 py-4 rounded-full text-base shadow-lg shadow-purple-500/25 hover:shadow-amber-500/25 hover:shadow-xl hover:scale-105 inline-flex items-center gap-3">
-            <UIcon name="i-mdi-email-outline" class="text-xl" />
-            <span>ludo@epekta.com</span>
-            <UIcon name="i-mdi-arrow-right" class="text-lg" />
-          </a>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-slate-200 fade-in-up" style="animation-delay: 0.2s;">
-          <p class="text-sm text-slate-500 font-light">
+    <footer class="py-16 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="text-slate-500 text-sm">
             © {{ new Date().getFullYear() }} Ludovic Guénet. All rights reserved.
-          </p>
-          <div class="flex items-center gap-6 stagger-children">
-            <a href="https://github.com/ludoguenet" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect text-slate-600 hover:text-purple-600 hover:scale-110 transition-all">
+          </div>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/ludoguenet" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors" aria-label="GitHub">
               <UIcon name="i-mdi-github" class="text-xl" />
             </a>
-            <a href="https://www.linkedin.com/in/ludoguenet" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect text-slate-600 hover:text-purple-600 hover:scale-110 transition-all">
+            <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors" aria-label="LinkedIn">
               <UIcon name="i-mdi-linkedin" class="text-xl" />
             </a>
-            <a href="https://x.com/laraveljutsu" aria-label="Visit my Twitter profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect text-slate-600 hover:text-purple-600 hover:scale-110 transition-all">
+            <a href="https://x.com/laraveljutsu" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors" aria-label="Twitter">
               <UIcon name="i-mdi-twitter" class="text-xl" />
             </a>
-            <a href="https://www.malt.fr/profile/ludovicguenet" aria-label="Visit my Malt profile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full glass-effect text-slate-600 hover:text-purple-600 hover:scale-110 transition-all">
+            <a href="https://www.malt.fr/profile/ludovicguenet" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors" aria-label="Malt">
               <UIcon name="i-mdi-handshake" class="text-xl" />
             </a>
           </div>
