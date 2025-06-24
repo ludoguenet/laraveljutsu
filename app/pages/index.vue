@@ -18,7 +18,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-40 px-6 relative overflow-hidden">
+    <section class="pt-24 sm:pt-32 pb-24 sm:pb-40 px-4 sm:px-6 relative overflow-hidden">
       <!-- Background decorative elements -->
       <div class="absolute inset-0 -z-10">
         <div class="absolute top-20 left-10 w-64 h-64 bg-lime-500/5 rounded-full blur-3xl"></div>
@@ -28,39 +28,35 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center">
           <div class="fade-in-up">
-            <p class="text-slate-500 uppercase tracking-wide text-sm font-medium mb-8">— Hello, I'm Ludovic</p>
+            <p class="text-slate-500 uppercase tracking-wide text-xs sm:text-sm font-medium mb-6 sm:mb-8">— Hello, I'm Ludovic</p>
             <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
-              <span class="block">THE</span>
-              <span class="block text-lime-500">LEGENDARY</span>
-              <span class="block">SAMURAÏ</span>
-            </h1>
 
-            <!-- Tech Stack Visual -->
-            <div class="flex flex-wrap justify-center items-center gap-4 mb-12 fade-in-up" style="animation-delay: 0.1s;">
-              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
-                <span class="text-slate-700 font-semibold">PHP</span>
+                        <!-- Tech Stack Visual -->
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mb-8 md:mb-12 fade-in-up" style="animation-delay: 0.1s;">
+              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold text-sm sm:text-base">PHP</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
-                <span class="text-slate-700 font-semibold">Laravel</span>
+              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold text-sm sm:text-base">Laravel</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
-                <span class="text-slate-700 font-semibold">Vue.js</span>
+              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold text-sm sm:text-base">Vue.js</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
-                <span class="text-slate-700 font-semibold">Nuxt.js</span>
+              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+                <span class="text-slate-700 font-semibold text-sm sm:text-base">Nuxt.js</span>
               </div>
             </div>
 
-            <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light mb-12 fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light mb-8 md:mb-12 fade-in-up px-4" style="animation-delay: 0.2s;">
               Available for freelance web development missions.<br>
               <span class="text-slate-900 font-medium">For a modern, efficient, and elegant application.</span>
             </p>
 
-            <div class="flex flex-wrap justify-center gap-4 fade-in-up" style="animation-delay: 0.3s;">
-              <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-12 py-4 rounded-full hover:bg-lime-500 transition-all duration-300 font-medium text-lg">
+            <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 fade-in-up px-4" style="animation-delay: 0.3s;">
+              <a href="mailto:ludo@epekta.com" class="bg-slate-900 text-white px-8 py-3 sm:px-10 sm:py-4 md:px-12 md:py-4 rounded-full hover:bg-lime-500 transition-all duration-300 font-medium text-base md:text-lg text-center">
                 Let's talk
               </a>
-              <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="border border-slate-200 text-slate-700 px-12 py-4 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 font-medium text-lg">
+              <a href="https://linkedin.com/in/ludoguenet" target="_blank" class="border border-slate-200 text-slate-700 px-8 py-3 sm:px-10 sm:py-4 md:px-12 md:py-4 rounded-full hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 font-medium text-base md:text-lg text-center">
                 Hire me
               </a>
             </div>
