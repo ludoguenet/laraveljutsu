@@ -29,7 +29,7 @@
         <div class="text-center">
           <div class="fade-in-up">
             <p class="text-slate-500 uppercase tracking-wide text-sm font-medium mb-8">— Hello, I'm Ludovic</p>
-            <h1 class="text-7xl md:text-9xl lg:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
               <span class="block">THE</span>
               <span class="block text-lime-500">LEGENDARY</span>
               <span class="block">SAMURAÏ</span>
