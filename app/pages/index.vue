@@ -20,7 +20,7 @@
     <!-- Hero Section -->
     <section class="pt-24 sm:pt-32 pb-24 sm:pb-40 px-4 sm:px-6 relative overflow-hidden">
       <!-- Background decorative elements -->
-      <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 -z-10 hidden sm:block">
         <div class="absolute top-20 left-10 w-64 h-64 bg-lime-500/5 rounded-full blur-3xl"/>
         <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-900/5 rounded-full blur-3xl"/>
       </div>
@@ -31,18 +31,18 @@
             <p class="text-slate-500 uppercase tracking-wide text-xs sm:text-sm font-medium mb-6 sm:mb-8">— Hello, I'm Ludovic</p>
             <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12"><span class="block">THE</span><span class="block text-lime-500">LEGENDARY</span><span class="block">SAMURAÏ</span></h1>
 
-                        <!-- Tech Stack Visual -->
-            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mb-8 md:mb-12 fade-in-up" style="animation-delay: 0.1s;">
-              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+                        <!-- Tech Stack Visual - Hidden on mobile for minimalism -->
+            <div class="hidden sm:flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-8 md:mb-12 fade-in-up" style="animation-delay: 0.1s;">
+              <div class="bg-white border border-slate-200 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
                 <span class="text-slate-700 font-semibold text-sm sm:text-base">PHP</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+              <div class="bg-white border border-slate-200 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
                 <span class="text-slate-700 font-semibold text-sm sm:text-base">Laravel</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+              <div class="bg-white border border-slate-200 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
                 <span class="text-slate-700 font-semibold text-sm sm:text-base">Vue.js</span>
               </div>
-              <div class="bg-white border border-slate-200 rounded-full px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
+              <div class="bg-white border border-slate-200 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-sm hover:shadow-md transition-shadow">
                 <span class="text-slate-700 font-semibold text-sm sm:text-base">Nuxt.js</span>
               </div>
             </div>
@@ -66,25 +66,25 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-32 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-start">
+    <section class="py-16 sm:py-32 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center sm:text-left sm:grid lg:grid-cols-2 gap-20 items-start">
           <div class="fade-in-up">
-            <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 leading-tight">
               About<br>
               <span class="text-lime-500">me</span>
             </h2>
-            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+            <div class="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-600 leading-relaxed">
               <p>
                 I use <strong class="text-slate-900">PHP</strong>, <strong class="text-slate-900">Laravel</strong>,
                 <strong class="text-slate-900">Vue.js</strong> and <strong class="text-slate-900">Nuxt.js</strong> daily.
               </p>
-              <p>
+              <p class="hidden sm:block">
                 I love creating modern, performant, and elegant web applications. With solid technical expertise
                 and attention to detail, I develop robust and maintainable solutions.
               </p>
             </div>
-            <div class="mt-8">
+            <div class="mt-6 sm:mt-8">
               <a href="https://youtube.com/@LaravelJutsu" target="_blank" class="inline-flex items-center text-lime-500 font-medium hover:text-lime-600 transition-colors">
                 Learn more about my work
                 <UIcon name="i-mdi-arrow-right" class="ml-2" />
@@ -92,24 +92,29 @@
             </div>
           </div>
 
-          <!-- Skills Grid -->
-          <div class="fade-in-up" style="animation-delay: 0.2s;">
-            <div class="grid grid-cols-2 gap-6">
-              <div class="bg-white p-6 rounded-2xl">
-                <h3 class="font-bold text-slate-900 mb-2">Backend</h3>
-                <p class="text-slate-600 text-sm">PHP, Laravel, RESTful API</p>
+          <!-- Skills Grid - Simplified on mobile -->
+          <div class="mt-12 sm:mt-0 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div class="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Backend</h3>
+                <p class="text-slate-600 text-xs sm:text-sm">PHP, Laravel, RESTful API</p>
               </div>
-              <div class="bg-white p-6 rounded-2xl">
-                <h3 class="font-bold text-slate-900 mb-2">Frontend</h3>
-                <p class="text-slate-600 text-sm">Vue.js, Nuxt.js, Tailwind CSS</p>
+              <div class="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Frontend</h3>
+                <p class="text-slate-600 text-xs sm:text-sm">Vue.js, Nuxt.js, Tailwind CSS</p>
               </div>
-              <div class="bg-white p-6 rounded-2xl">
-                <h3 class="font-bold text-slate-900 mb-2">DevOps</h3>
-                <p class="text-slate-600 text-sm">CI/CD, Git</p>
+              <div class="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl sm:hidden">
+                <h3 class="font-bold text-slate-900 mb-1 text-sm">Database</h3>
+                <p class="text-slate-600 text-xs">MySQL, MariaDB, Redis</p>
               </div>
-              <div class="bg-white p-6 rounded-2xl">
-                <h3 class="font-bold text-slate-900 mb-2">Database</h3>
-                <p class="text-slate-600 text-sm">MySQL, MariaDB, Sqlite, Redis</p>
+              <!-- Desktop only skills -->
+              <div class="hidden sm:block bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">DevOps</h3>
+                <p class="text-slate-600 text-xs sm:text-sm">CI/CD, Git</p>
+              </div>
+              <div class="hidden sm:block bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+                <h3 class="font-bold text-slate-900 mb-1 sm:mb-2 text-sm sm:text-base">Database</h3>
+                <p class="text-slate-600 text-xs sm:text-sm">MySQL, MariaDB, Sqlite, Redis</p>
               </div>
             </div>
           </div>
@@ -118,15 +123,15 @@
     </section>
 
     <!-- Latest Article Section -->
-    <section class="py-32">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-start">
+    <section class="py-16 sm:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center sm:text-left sm:grid lg:grid-cols-2 gap-20 items-start">
           <div class="fade-in-up">
-            <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 leading-tight">
               Latest<br>
               <span class="text-lime-500">article</span>
             </h2>
-            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed hidden sm:block">
               Discover my latest thoughts on web development, Laravel best practices,
               and modern development techniques.
             </p>
@@ -136,34 +141,34 @@
             </NuxtLink>
           </div>
 
-          <div class="fade-in-up" style="animation-delay: 0.2s;">
-            <div v-if="pending" class="flex items-center justify-center py-16">
-              <div class="w-8 h-8 border-2 border-lime-500 border-t-transparent rounded-full animate-spin"/>
+          <div class="mt-8 sm:mt-0 fade-in-up" style="animation-delay: 0.2s;">
+            <div v-if="pending" class="flex items-center justify-center py-12 sm:py-16">
+              <div class="w-6 h-6 sm:w-8 sm:h-8 border-2 border-lime-500 border-t-transparent rounded-full animate-spin"/>
             </div>
-            <div v-else-if="error" class="text-slate-600">
-              <p>An error occurred while loading articles.</p>
+            <div v-else-if="error" class="text-slate-600 text-center sm:text-left">
+              <p class="text-sm sm:text-base">An error occurred while loading articles.</p>
             </div>
             <div v-else-if="latestPost" class="group">
-              <NuxtLink :to="latestPost.path" class="block bg-white border border-slate-200 hover:border-slate-300 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg">
-                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-lime-500 transition-colors">
+              <NuxtLink :to="latestPost.path" class="block bg-white border border-slate-200 hover:border-slate-300 rounded-xl sm:rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg">
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-lime-500 transition-colors">
                   {{ latestPost.title }}
                 </h3>
-                <p class="text-slate-600 mb-6 leading-relaxed">
+                <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {{ latestPost.description }}
                 </p>
                 <div class="flex items-center justify-between">
-                  <div class="text-sm text-slate-500">
+                  <div class="text-xs sm:text-sm text-slate-500">
                     {{ new Date(latestPost.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
                   </div>
-                  <div class="flex items-center text-lime-500 font-medium text-sm group-hover:translate-x-1 transition-transform">
+                  <div class="flex items-center text-lime-500 font-medium text-xs sm:text-sm group-hover:translate-x-1 transition-transform">
                     Read article
-                    <UIcon name="i-mdi-arrow-right" class="ml-2" />
+                    <UIcon name="i-mdi-arrow-right" class="ml-1 sm:ml-2" />
                   </div>
                 </div>
               </NuxtLink>
             </div>
-            <div v-else class="text-slate-600">
-              <p>No articles yet.</p>
+            <div v-else class="text-slate-600 text-center sm:text-left">
+              <p class="text-sm sm:text-base">No articles yet.</p>
             </div>
           </div>
         </div>
