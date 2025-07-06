@@ -29,7 +29,31 @@
         <div class="text-center">
           <div class="fade-in-up">
             <p class="text-slate-500 uppercase tracking-wide text-xs sm:text-sm font-medium mb-6 sm:mb-8">— Hello, I'm Ludovic</p>
-            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12"><span class="block">THE</span><span class="block text-lime-500">LEGENDARY</span><span class="block">SAMURAÏ</span></h1>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.8] tracking-tight mb-12">
+              <span class="block relative overflow-hidden">
+                <span class="relative z-10 inline-block animate-pulse">THE</span>
+                <!-- Slash lines using absolute positioning -->
+                <span class="absolute top-0 left-0 w-8 h-0.5 bg-lime-500 rotate-45 animate-ping opacity-0 animate-delay-1000"></span>
+                <span class="absolute top-0 right-0 w-8 h-0.5 bg-lime-500 -rotate-45 animate-ping opacity-0 animate-delay-1500"></span>
+                <span class="absolute bottom-0 left-0 w-8 h-0.5 bg-lime-500 -rotate-45 animate-ping opacity-0 animate-delay-2000"></span>
+                <span class="absolute bottom-0 right-0 w-8 h-0.5 bg-lime-500 rotate-45 animate-ping opacity-0 animate-delay-2500"></span>
+              </span>
+
+              <span class="block relative overflow-hidden text-lime-500">
+                <span class="relative z-10 inline-block animate-pulse animate-delay-500">LEGENDARY</span>
+                <span class="absolute top-1/2 left-0 w-12 h-0.5 bg-lime-500 rotate-45 animate-ping opacity-0 animate-delay-3000"></span>
+                <span class="absolute top-1/2 right-0 w-12 h-0.5 bg-lime-500 -rotate-45 animate-ping opacity-0 animate-delay-3500"></span>
+                <span class="absolute top-0 left-1/2 w-0.5 h-12 bg-lime-500 rotate-45 animate-ping opacity-0 animate-delay-4000"></span>
+              </span>
+
+              <span class="block relative overflow-hidden">
+                <span class="relative z-10 inline-block animate-pulse animate-delay-1000">SAMURAÏ</span>
+                <span class="absolute top-0 left-0 w-10 h-0.5 bg-lime-500 rotate-12 animate-ping opacity-0 animate-delay-4500"></span>
+                <span class="absolute top-0 right-0 w-10 h-0.5 bg-lime-500 -rotate-12 animate-ping opacity-0 animate-delay-5000"></span>
+                <span class="absolute bottom-0 left-1/4 w-8 h-0.5 bg-lime-500 rotate-45 animate-ping opacity-0 animate-delay-5500"></span>
+                <span class="absolute bottom-0 right-1/4 w-8 h-0.5 bg-lime-500 -rotate-45 animate-ping opacity-0 animate-delay-6000"></span>
+              </span>
+            </h1>
 
                         <!-- Tech Stack Visual - Hidden on mobile for minimalism -->
             <div class="hidden sm:flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-8 md:mb-12 fade-in-up" style="animation-delay: 0.1s;">

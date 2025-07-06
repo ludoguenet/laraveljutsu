@@ -37,6 +37,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Samurai Animation Delays */
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-1000 { animation-delay: 1000ms; }
+.animate-delay-1500 { animation-delay: 1500ms; }
+.animate-delay-2000 { animation-delay: 2000ms; }
+.animate-delay-2500 { animation-delay: 2500ms; }
+.animate-delay-3000 { animation-delay: 3000ms; }
+.animate-delay-3500 { animation-delay: 3500ms; }
+.animate-delay-4000 { animation-delay: 4000ms; }
+.animate-delay-4500 { animation-delay: 4500ms; }
+.animate-delay-5000 { animation-delay: 5000ms; }
+.animate-delay-5500 { animation-delay: 5500ms; }
+.animate-delay-6000 { animation-delay: 6000ms; }
+
 /* Navigation backdrop blur */
 nav {
     backdrop-filter: blur(20px) saturate(180%);
