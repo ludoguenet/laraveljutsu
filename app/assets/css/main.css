@@ -51,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 .animate-delay-5500 { animation-delay: 5500ms; }
 .animate-delay-6000 { animation-delay: 6000ms; }
 
+
+
 /* Navigation backdrop blur */
 nav {
     backdrop-filter: blur(20px) saturate(180%);
